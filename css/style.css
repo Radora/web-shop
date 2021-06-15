@@ -33,3 +33,7 @@
         border-top:0 none;
     }
 }
+.dark-mode {
+    background-color: black;
+    color: white;
+}
