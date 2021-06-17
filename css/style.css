@@ -1,37 +1,29 @@
-#login-dp{
-    min-width: 250px;
-    padding: 14px 14px 0;
-    overflow:hidden;
-    background-color:rgba(255,255,255,.8);
-}
-#login-dp .help-block{
-    font-size:12px
-}
-#login-dp .bottom{
-    background-color:rgba(255,255,255,.8);
-    border-top:1px solid #ddd;
-    clear:both;
-    padding:14px;
-}
-#login-dp .social-buttons{
-    margin:12px 0
-}
-#login-dp .social-buttons a{
-    width: 49%;
-}
-#login-dp .form-group {
-    margin-bottom: 10px;
+.main-header{
+    text-align: center;
 }
 
-@media(max-width:768px){
-    #login-dp{
-        background-color: inherit;
-        color: #fff;
-    }
-    #login-dp .bottom{
-        background-color: inherit;
-        border-top:0 none;
-    }
+.carousel-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    max-height: 780px;
+    width: 100%;
+    position: center;
+    height: 60vw;
+    object-fit: cover;
+}
+
+#footer {
+    bottom : 1px;
+    height : 30px;
+    background: black;
+    color: white;
+    margin-top : 40px;
+    text-align: center;
+    vertical-align: middle;
+    position:fixed;
+    width:100%;
 }
 .dark-mode {
     background-color: black;
