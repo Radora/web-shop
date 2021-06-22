@@ -1,6 +1,13 @@
-.main-header{
-    text-align: center;
+
+body{
+    background-image: url("../img/background-main.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
 }
+
 
 .carousel-image{
     display: block;
@@ -15,7 +22,7 @@
 }
 
 #footer {
-    bottom : 1px;
+    bottom : 0px;
     height : 30px;
     background: black;
     color: white;
@@ -25,7 +32,53 @@
     position:fixed;
     width:100%;
 }
+
+#footer a{
+    color: white;
+}
+
+#footer a+a{
+    margin-left: 30px;
+}
+
 .dark-mode {
     background-color: black;
     color: white;
 }
+
+.impressum-box{
+    text-align: left;
+    margin-top: 15vh;
+    margin-left: 30vh;
+    color: rebeccapurple;
+}
+
+.main-header{
+    color: white;
+    margin: calc(10vh - 40px) auto 0 auto;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    display: block;
+    height: auto;
+    text-align: center;
+}
+
+.special-offer-star{
+    color: red;
+}
+
+.start-shopping-button{
+    margin: calc(10vh - 40px) auto 0 auto;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    display: block;
+    height: auto;
+    text-align: center;
+
+}
+
+
+
+
+
