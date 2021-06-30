@@ -1,89 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Help</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap">
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+          crossorigin="anonymous"
+  />
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+  />
+  <link
+          href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+          rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/style.css" />
+  <title>Matt&Rado Computer Store</title>
 </head>
+
 <body>
 
-<!-- NAVIGATION BAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="../index.html">ShopName</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarScroll">
-    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-      <li class="nav-item active">
-        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="impressum.html">Legal Notice</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="help.html">Help</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-          Products
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-          <li><a class="dropdown-item" href="#">Smartphones</a></li>
-          <li><a class="dropdown-item" href="#">Computers</a></li>
-          <li><a class="dropdown-item" href="#">Notebooks</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Special offers <i class="fa fa-star special-offer-star" aria-hidden="true"></i></a></li>
-        </ul>
-      </li>
-    </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+  <div class="container">
+    <a href="../index.html" class="navbar-brand">Matt & Rado</a>
+
+    <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="products.html" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="login.html" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="register.html" class="nav-link">Register</a>
+        </li>
+        <li class="nav-item">
+          <a href="impressum.html" class="nav-link">Legal Notice</a>
+        </li>
+        <li class="nav-item">
+          <a href="help.html" class="nav-link">Help</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
-<!-- NAVIGATION BAR END -->
-<div class="helpHeader">
-<h1><strong>Help</strong></h1>
-</div>
+<!-- Navbar end -->
 
 
-<div class="help">
-  <h3><strong>FAQ</strong></h3>
-  <br>
-  <h5><strong>You want to contact us?</strong></h5>
-  <p>Then take a look at our<a href="impressum.html"> Legal notice</a> Page.</p>
-  <br>
-  <h5><strong>Your product is damaged?</strong></h5>
-  <p>You can send your product to us, so we can fix it for you!</p>
-  <br>
-  <h5><strong>Is there any return policy?</strong></h5>
-  <p>Yes, if you are not happy with your product, then you can send it back, if its in the first 14 days!</p>
-  <br>
-  <h5><strong>Are we shipping globally?</strong></h5>
-  <p>Yes!</p>
-  <br>
-  <h5><strong>How much are the shipping cost?</strong></h5>
-  <p>It depends. If you select the express shipping you pay 20 euro and for the standard shipping 10 euro.</p>
-  <br>
-  <h5><strong>How long does it take to deliver the product?</strong></h5>
-  <p>2-6 days.</p>
-  <br>
-  <h5><strong>How can i pay?</strong></h5>
-  <p>You can pay with Bank account, Paypal, Amazon Pay, Apple Pay, Google Pay, Debit or Credit card and even with Bitcoin!</p>
-  <br>
-
-</div>
-
+<!-- Footer -->
 <footer id="footer">
   <a href="impressum.html" class="link-warning">Legal Notice</a>
   <a href="help.html" class="link-warning">Help</a>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"
+></script>
 </body>
 </html>
