@@ -15,6 +15,10 @@ body{
     font-size: 25px;
 }
 
+.navbar-brand:hover{
+    color: pink!important;
+}
+
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
     color: pink;
