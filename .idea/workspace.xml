@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13fe82f0-a9df-4888-8c3a-dc3b0ec5073a" name="Default Changelist" comment="updated  the help and impressum pages and fixed some other things.">
-      <change beforePath="$PROJECT_DIR$/pages/products_administration.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products_administration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/user-logic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/private.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -85,6 +89,8 @@
       <workItem from="1627843856869" duration="1156000" />
       <workItem from="1642929785375" duration="2888000" />
       <workItem from="1642938796864" duration="15000" />
+      <workItem from="1642951073284" duration="653000" />
+      <workItem from="1642960620267" duration="2163000" />
     </task>
     <servers />
   </component>
