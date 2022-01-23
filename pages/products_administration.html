@@ -59,101 +59,119 @@
 <!-- Navbar end -->
 
 <!-- Register -->
-<main class="form-signin">
-    <form>
-        <h1 class="h1 my-4 fw-normal">Add New Product</h1>
-        <div class="form-floating my-1">
-            <input type="text" class="form-control" id="NewProductTitle" placeholder="Name/Title">
-            <label for="NewProductTitle">Name/Title</label>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="form-signin">
+                <form>
+                    <h1 class="h1 my-4 fw-normal">Add New Product</h1>
+                    <div class="form-floating my-1">
+                        <input type="text" class="form-control" id="NewProductTitle" placeholder="Name/Title">
+                        <label for="NewProductTitle">Name/Title</label>
+                    </div>
+                    <div class="form-floating my-1">
+                        <input type="text" class="form-control" id="NewProductDesc" placeholder="Description">
+                        <label for="NewProductDesc">Description</label>
+                    </div>
+                    <div class="product-image py-2">
+                        <label for="avatar">Choose picture:</label>
+                        <input type="file" class="text-center"
+                               id="avatar" name="avatar"
+                               accept="image/png, image/jpeg">
+                    </div>
+
+                    <div class="form-floating my-1">
+                        <input type="number" class="form-control" id="NewProductPrice" placeholder="Price">
+                        <label for="NewProductPrice">Price</label>
+                    </div>
+                    <div class="form-floating my-1">
+                        <input type="number" class="form-control" id="NewProductStock" placeholder="Stock">
+                        <label for="NewProductStock">Stock</label>
+                    </div>
+
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+                </form>
+            </div>
         </div>
-        <div class="form-floating my-1">
-            <input type="text" class="form-control" id="NewProductDesc" placeholder="Description">
-            <label for="NewProductDesc">Description</label>
+        <div class="col-12 col-lg-6">
+            <div class="manage-products-table row justify-content-center text-white">
+                <div class="col-auto">
+                    <h1 class="">Manage product</h1>
+
+                    <form action="#" class="mb-3">
+                        <label for="categories">Choose category:</label>
+                        <select name="categories" id="categories">
+                            <option value="Smartphones">Smartphones</option>
+                            <option value="Notebooks">Notebooks</option>
+                            <option value="PC's">PC's</option>
+                        </select>
+                    </form>
+
+                    <table class="table table-hover text-start text-white bg-secondary">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title/Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Image</th>
+                            <th scope="col-2">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Iphone 8</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td colspan="2">
+                                <button type="button" class="btn btn-outline-danger">Delete</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-info">Edit</button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td colspan="2">
+                                <button type="button" class="btn btn-outline-danger">Delete</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-info">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td class="text-start" colspan="">Larry the Bird</td>
+                            <td>Thornton</td>
+                            <td>@twitter</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td colspan="2">
+                                <button type="button" class="btn btn-outline-danger">Delete</button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-info">Edit</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="product-image py-2">
-            <label for="avatar">Choose picture:</label>
-            <input type="file" class="text-center"
-                   id="avatar" name="avatar"
-                   accept="image/png, image/jpeg">
-        </div>
-
-        <div class="form-floating my-1">
-            <input type="number" class="form-control" id="NewProductPrice" placeholder="Price">
-            <label for="NewProductPrice">Price</label>
-        </div>
-        <div class="form-floating my-1">
-            <input type="number" class="form-control" id="NewProductStock" placeholder="Stock">
-            <label for="NewProductStock">Stock</label>
-        </div>
-
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
-    </form>
-
-
-    <div class="manage-products-table position-relative">
-
-        <h1>Manage product</h1>
-
-        <p>Category:</p>
-
-        <form action="#" class="mb-3">
-            <label for="categories">Choose category:</label>
-            <select name="categories" id="categories">
-                <option value="Smartphones">Smartphones</option>
-                <option value="Notebooks">Notebooks</option>
-                <option value="PC's">PC's</option>
-            </select>
-        </form>
-
-        <table class="table table-hover text-white bg-secondary">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title/Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Category</th>
-                <th scope="col">Image</th>
-                <th scope="col-2">Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Iphone 8</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td colspan="2">
-                    <button type="button" class="btn btn-outline-danger">Delete</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-outline-info">Edit</button>
-                </td>
-
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            </tbody>
-        </table>
     </div>
+</div>
 
 
-</main>
 <!-- Register end -->
 
 <!-- Footer -->
