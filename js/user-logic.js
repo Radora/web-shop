@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     $('#new_user_reg_btn').click(RegisterNewUser);
 
 });
@@ -11,7 +10,7 @@ function RegisterNewUser() {
     const surname = $('#new_user_surname').val();
     const username = $('#new_user_username').val();
     const email = $('#new_user_email').val();
-    const pass = $('#new_user_pass').val();
+    const password = $('#new_user_pass').val();
     const address = $('#new_user_address').val();
 
     var newUserObject = new Object();
@@ -20,32 +19,43 @@ function RegisterNewUser() {
     newUserObject.surname = surname;
     newUserObject.username = username;
     newUserObject.email = email;
-    newUserObject.pass = pass;
+    newUserObject.password = password;
     newUserObject.address = address;
-    newUserObject.role = "ROLE_USER";
+    newUserObject.roles = "ROLE_USER";
+    newUserObject.active = 1;
 
-    var jsonTest = JSON.stringify(newUserObject);
-
-    console.log(jsonTest);
+    var jsonFileTest = JSON.stringify(newUserObject);
 
 
-    // $.ajax({
-    //     method: 'POST',
-    //     url: 'http://localhost:8080/login',
-    //     data: JSON.stringify({
-    //         email: email,
-    //         password,
-    //     }),
-    //     headers: {
-    //         Authorization: 'application/json',
-    //     },
-    //     error: function (data) {
-    //         // sessionStorage.setItem('token', data.token);
-    //         sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
-    //         // $(location).prop('href');
-    //         window.location.href = 'private.html';
-    //     },
-    // });
+    console.log('in function');
+
+
+
+    var request = $.ajax({
+        method: 'POST',
+        url: 'http://localhost:8080/register',
+        data: jsonFileTest,
+        headers: {
+            Authorization: 'application/json',
+        },
+        error: function (data) {
+            // sessionStorage.setItem('token', data.token);
+            sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
+            // $(location).prop('href');
+            window.location.href = 'private.html';
+        },
+
+    });
+
+    request.done(function( msg ) {
+       console.log('Success');
+    });
+
+    request.fail(function( jqXHR, textStatus ) {
+        alert( "Request failed: " + textStatus );
+    });
+
 }
 
-function ModifyExistingUser() {};
+function ModifyExistingUser() {
+};
