@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-
-    // Retrieving products from DB and displaying them on the page
+    // Retrieving products from DB and displaying 1them on the page
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/products',
@@ -14,7 +13,6 @@ $(document).ready(function () {
             let productTitle = data[i].name;
             let productPrice = data[i].price;
             let productCategoryName = data[i].category.name;
-
 
             let htmlToAppend = '<tr></tr><td class="product-id" scope="row">' + productId + '</td>';
             htmlToAppend += '<td class="product-title">' + productTitle + '</td>';
@@ -32,7 +30,6 @@ $(document).ready(function () {
     $("#edit_products_table").on('click', '.btn-delete-product', DeleteProduct);
 
     function DeleteProduct() {
-
         // Getting value from the first cell -> the product ID
         var currentRow = $(this).closest("tr");
         var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
@@ -45,8 +42,21 @@ $(document).ready(function () {
             url: 'http://localhost:8080/products/' + id,
             mode: 'no-cors'
         }).done(function(  ) {
-            console.log("deleted");
+            location.reload();
         });
+    }
+
+
+    function EditProduct() {
+
+        // Getting value from the first cell -> the product ID
+        var currentRow = $(this).closest("tr");
+        var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+
+        var asJson = JSON.stringify(id);
+
+        console.log(asJson);
+
 
     }
 

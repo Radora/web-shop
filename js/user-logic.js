@@ -1,26 +1,9 @@
-import fetchService from "./services/fetchService.js";
-
 $(document).ready(function () {
 
     $('#new_user_reg_btn').click(RegisterNewUser);
 
-    $('#btn_ajax_test').click(testAjax);
-
 });
 
-function testAjax(){
-
-    $.ajax({
-        type: 'GET',
-        url: 'http://localhost:8080/users',
-        mode: 'no-cors'
-    }).done(function( data ) {
-        if ( console && console.log ) {
-            console.log( "Sample of data:", data.slice( 0, 100 ) );
-        }
-    });
-
-}
 
 function RegisterNewUser() {
     const firstname = $('#new_user_firstname').val();
@@ -62,6 +45,3 @@ function RegisterNewUser() {
     });
 
 }
-
-function ModifyExistingUser() {
-};

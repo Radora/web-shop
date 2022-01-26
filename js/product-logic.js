@@ -3,11 +3,6 @@ $(document).ready(function () {
 
     $('#add_new_product_btn').click(AddNewProduct);
 
-   // $('.btn-delete-product').click(DeleteProduct);
-
-
-
-
     function AddNewProduct() {
         const title = $('#new_product_title').val();
         const desc = $('#new_product_desc').val();
@@ -78,35 +73,5 @@ $(document).ready(function () {
 
 
     }
-
-    function DeleteProduct() {
-
-        // Getting value from the first cell -> the product ID
-        var currentRow = $(this).closest("tr");
-        var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
-
-        var asJson = JSON.stringify(id);
-
-        console.log(asJson);
-
-    }
-
-
-
-    function EditProduct() {
-
-        // Getting value from the first cell -> the product ID
-        var currentRow = $(this).closest("tr");
-        var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
-
-        var asJson = JSON.stringify(id);
-
-        console.log(asJson);
-
-
-    }
-
-
-
 
 })
