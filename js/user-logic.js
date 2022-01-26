@@ -22,8 +22,6 @@ function testAjax(){
 
 }
 
-
-
 function RegisterNewUser() {
     const firstname = $('#new_user_firstname').val();
     const surname = $('#new_user_surname').val();
@@ -45,34 +43,23 @@ function RegisterNewUser() {
 
     var jsonFileTest = JSON.stringify(newUserObject);
 
+    var request = $.ajax({
+        method: 'POST',
+        url: 'http://localhost:8080/register',
+        data: jsonFileTest,
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
 
-    console.log(jsonFileTest);
 
+    request.done(function( msg ) {
+       console.log('Success');
+    });
 
-
-    // var request = $.ajax({
-    //     method: 'POST',
-    //     url: 'http://localhost:8080/register',
-    //     data: jsonFileTest,
-    //     headers: {
-    //         Authorization: 'application/json',
-    //     },
-    //     error: function (data) {
-    //         // sessionStorage.setItem('token', data.token);
-    //         sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
-    //         // $(location).prop('href');
-    //         window.location.href = 'private.html';
-    //     },
-    //
-    // });
-    //
-    // request.done(function( msg ) {
-    //    console.log('Success');
-    // });
-    //
-    // request.fail(function( jqXHR, textStatus ) {
-    //     alert( "Request failed: " + textStatus );
-    // });
+    request.fail(function( jqXHR, textStatus ) {
+        alert( "Request failed: " + textStatus );
+    });
 
 }
 
