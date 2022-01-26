@@ -3,9 +3,9 @@ $(document).ready(function () {
 
     $('#add_new_product_btn').click(AddNewProduct);
 
-    $('.btn-delete-product').click(DeleteProduct);
+   // $('.btn-delete-product').click(DeleteProduct);
 
-    $("#edit_products_table").on('click', '.btn-delete-product', DeleteProduct);
+
 
 
     function AddNewProduct() {
