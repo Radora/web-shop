@@ -14,6 +14,26 @@ $(document).ready(function () {
         const price = $('#new_product_price').val();
         const onStock = $('#new_product_stock').val();
 
+        const productCategoryName = $('#new_product_cat').val();
+        var productCategoryID;
+        var productCatData = {};
+        var productCategoryArray = [];
+
+        if (productCategoryName === 'Laptops'){
+            productCatData.id = 2;
+            productCatData.name = productCategoryName;
+            productCategoryArray.push(productCatData);
+        }else if (productCategoryName === 'Smartphones'){
+            productCatData.id = 1;
+            productCatData.name = productCategoryName;
+            productCategoryArray.push(productCatData);
+            productCategoryID = 1;
+        }else if (productCategoryName === 'Desktops'){
+            productCatData.id = 3;
+            productCatData.name = productCategoryName;
+            productCategoryArray.push(productCatData);
+        }
+
 
         var newProductObject = new Object();
 
@@ -21,30 +41,42 @@ $(document).ready(function () {
         newProductObject.desc = desc;
         newProductObject.price = price;
         newProductObject.onStock = onStock;
+        newProductObject.category = productCategoryArray;
 
 
-        var jsonTest = JSON.stringify(newProductObject);
+        var productJSON = JSON.stringify(newProductObject);
+
+
+
+        var jsonTest = ' {"category" : { "id" : 1, "name" : "Smartphones"}, "name" : "Iphone 16", "description" : "Description", "price" : 500 , "product_stock" : 10}';
 
         console.log(jsonTest);
 
 
-        // $.ajax({
-        //     method: 'POST',
-        //     url: 'http://localhost:8080/login',
-        //     data: JSON.stringify({
-        //         email: email,
-        //         password,
-        //     }),
-        //     headers: {
-        //         Authorization: 'application/json',
-        //     },
-        //     error: function (data) {
-        //         // sessionStorage.setItem('token', data.token);
-        //         sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
-        //         // $(location).prop('href');
-        //         window.location.href = 'private.html';
-        //     },
-        // });
+        // INSERT INTO `product`(`id`, `description`, `name`, `price`, `product_stock`, `categoryid`)
+        // VALUES ('1','Description1','Iphone X','499.0','18','1'),
+
+
+        var request = $.ajax({
+            method: 'POST',
+            url: 'http://localhost:8080/products/new',
+            data: jsonTest,
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+
+
+        request.done(function( msg ) {
+            console.log('Success');
+        });
+
+        request.fail(function( jqXHR, textStatus ) {
+            alert( "Request failed: " + textStatus );
+        });
+
+
+
     }
 
     function DeleteProduct() {
@@ -56,25 +88,6 @@ $(document).ready(function () {
         var asJson = JSON.stringify(id);
 
         console.log(asJson);
-
-        // $.ajax({
-        //     method: 'POST',
-        //     url: 'http://localhost:8080/login',
-        //     data: JSON.stringify({
-        //         email: email,
-        //         password,
-        //     }),
-        //     headers: {
-        //         Authorization: 'application/json',
-        //     },
-        //     error: function (data) {
-        //         // sessionStorage.setItem('token', data.token);
-        //         sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
-        //         // $(location).prop('href');
-        //         window.location.href = 'private.html';
-        //     },
-        // });
-
 
     }
 
@@ -89,24 +102,6 @@ $(document).ready(function () {
         var asJson = JSON.stringify(id);
 
         console.log(asJson);
-
-        // $.ajax({
-        //     method: 'POST',
-        //     url: 'http://localhost:8080/login',
-        //     data: JSON.stringify({
-        //         email: email,
-        //         password,
-        //     }),
-        //     headers: {
-        //         Authorization: 'application/json',
-        //     },
-        //     error: function (data) {
-        //         // sessionStorage.setItem('token', data.token);
-        //         sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
-        //         // $(location).prop('href');
-        //         window.location.href = 'private.html';
-        //     },
-        // });
 
 
     }
