@@ -22,13 +22,11 @@ $(document).ready(function () {
             productCatData.id = 1;
             productCatData.name = productCategoryName;
             productCategoryArray.push(productCatData);
-            productCategoryID = 1;
         }else if (productCategoryName === 'Desktops'){
             productCatData.id = 3;
             productCatData.name = productCategoryName;
             productCategoryArray.push(productCatData);
         }
-
 
         var newProductObject = new Object();
 
@@ -38,10 +36,7 @@ $(document).ready(function () {
         newProductObject.onStock = onStock;
         newProductObject.category = productCategoryArray;
 
-
         var productJSON = JSON.stringify(newProductObject);
-
-
 
         var jsonTest = ' {"category" : { "id" : 1, "name" : "Smartphones"}, "name" : "Iphone 16", "description" : "Description", "price" : 500 , "product_stock" : 10}';
 

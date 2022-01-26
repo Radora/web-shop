@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="13fe82f0-a9df-4888-8c3a-dc3b0ec5073a" name="Default Changelist" comment="updated  the help and impressum pages and fixed some other things.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin-page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/product-logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/product-logic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/user-logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/user-logic.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +95,7 @@
       <workItem from="1643108119070" duration="135000" />
       <workItem from="1643108682227" duration="9765000" />
       <workItem from="1643184942138" duration="8742000" />
-      <workItem from="1643206786587" duration="2512000" />
+      <workItem from="1643206786587" duration="2591000" />
     </task>
     <servers />
   </component>
