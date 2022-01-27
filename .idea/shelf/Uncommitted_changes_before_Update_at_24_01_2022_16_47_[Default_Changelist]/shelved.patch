@@ -1,0 +1,165 @@
+Index: pages/login.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\"/>\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\r\n    <link\r\n            href=\"../css/bootstrap.min.css\"\r\n            rel=\"stylesheet\"\r\n    />\r\n    <link\r\n            rel=\"stylesheet\"\r\n            href=\"../css/bootstrap-icons.css\"\r\n    />\r\n    <link rel=\"stylesheet\" href=\"../css/style.css\"/>\r\n    <script src=\"../js/main.js\"></script>\r\n    <title>Login</title>\r\n</head>\r\n\r\n<body>\r\n\r\n<!-- Navbar -->\r\n<nav class=\"navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top\">\r\n    <div class=\"container\">\r\n        <a href=\"../index.html\" class=\"navbar-brand\">Matt & Rado</a>\r\n\r\n        <button\r\n                class=\"navbar-toggler\"\r\n                type=\"button\"\r\n                data-bs-toggle=\"collapse\"\r\n                data-bs-target=\"#navmenu\"\r\n        >\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navmenu\">\r\n            <ul class=\"navbar-nav ms-auto\">\r\n                <li class=\"nav-item\">\r\n                    <a href=\"../index.html\" class=\"nav-link\">Home</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a href=\"products.html\" class=\"nav-link\">Products</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a href=\"login.html\" class=\"nav-link\">Login</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a href=\"register.html\" class=\"nav-link\">Register</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a href=\"impressum.html\" class=\"nav-link\">Legal Notice</a>\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    <a href=\"help.html\" class=\"nav-link\">Help</a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</nav>\r\n<!-- Navbar end -->\r\n\r\n<!-- Log in -->\r\n<main class=\"form-signin\">\r\n    <form>\r\n        <h1 class=\"h1 my-3 fw-normal\">Please sign in</h1>\r\n        <div class=\"form-floating my-1\">\r\n            <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"name@example.com\">\r\n            <label for=\"username\">Username</label>\r\n        </div>\r\n        <div class=\"form-floating my-1\">\r\n            <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\">\r\n            <label for=\"password\">Password</label>\r\n        </div>\r\n\r\n<!--        <div class=\"checkbox mb-3\">-->\r\n<!--            <label>-->\r\n<!--                <input type=\"checkbox\" value=\"remember-me\" onclick=\"myFunction()\"> Show Password-->\r\n<!--            </label>-->\r\n<!--        </div>-->\r\n        <button class=\"w-100 btn btn-lg btn-primary mt-3\" type=\"submit\">Sign in</button>\r\n    </form>\r\n</main>\r\n<!-- Log in end -->\r\n\r\n\r\n<!-- Footer -->\r\n<footer id=\"footer\">\r\n    <a href=\"impressum.html\" class=\"link-warning\">Legal Notice</a>\r\n    <a href=\"help.html\" class=\"link-warning\">Help</a>\r\n</footer>\r\n\r\n<script\r\n        src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js\"\r\n        integrity=\"sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4\"\r\n        crossorigin=\"anonymous\"\r\n></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pages/login.html b/pages/login.html
+--- a/pages/login.html	
++++ b/pages/login.html	
+@@ -13,7 +13,7 @@
+             href="../css/bootstrap-icons.css"
+     />
+     <link rel="stylesheet" href="../css/style.css"/>
+-    <script src="../js/main.js"></script>
++
+     <title>Login</title>
+ </head>
+ 
+@@ -94,5 +94,8 @@
+         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+         crossorigin="anonymous"
+ ></script>
++<script src="../js/login.js"></script>
++<script src="../js/main.js"></script>
++<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ </body>
+ </html>
+\ No newline at end of file
+Index: js/main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>function myFunction() {\r\n    var element = document.body;\r\n    element.classList.toggle(\"dark-mode\");\r\n}\r\nfunction myFunction() {\r\n    var x = document.getElementById(\"floatingPassword\");\r\n    if (x.type === \"password\") {\r\n        x.type = \"text\";\r\n    } else {\r\n        x.type = \"password\";\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/main.js b/js/main.js
+--- a/js/main.js	
++++ b/js/main.js	
+@@ -1,4 +1,4 @@
+-function myFunction() {
++   function myFunction() {
+     var element = document.body;
+     element.classList.toggle("dark-mode");
+ }
+Index: js/login.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/login.js b/js/login.js
+new file mode 100644
+--- /dev/null	
++++ b/js/login.js	
+@@ -0,0 +1,26 @@
++    function signIn () {
++    const email = $('#email').val();
++    const password = $('#password').val();
++
++    jQuery.ajax({
++    method: 'POST',
++    url: 'http://localhost:8080/login.html',
++    data: JSON.stringify({
++    email: email,
++    password,
++}),
++    headers: {
++    Authorization: 'application/json',
++},
++    error: function (data) {
++    // sessionStorage.setItem('token', data.token);
++    sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
++    // $(location).prop('href');
++    window.location.href = '../index.html';
++},
++});
++}
++    $(document).ready(function() {
++    jQuery('#login').click(signIn);
++});
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"13fe82f0-a9df-4888-8c3a-dc3b0ec5073a\" name=\"Default Changelist\" comment=\"updated  the help and impressum pages and fixed some other things.\">\r\n      <change afterPath=\"$PROJECT_DIR$/css/bootstrap-icons.css\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/css/bootstrap.min.css\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/js/bootstrap.min.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/db-model/db_shop1.jpeg\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/db-model/db_shop_2.gif\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/db-model/tetsdb.jpg\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/help.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/help.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/impressum.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/impressum.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/login.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/login.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/products.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/products.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/products_administration.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/products_administration.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pages/register.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pages/register.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1uIgjEGIkL5rfbV7Mh00UxVG6Z4\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"DefaultHtmlFileTemplate\" value=\"HTML File\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/js\" />\r\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\r\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\r\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\r\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"project.propVCSSupport.Mappings\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\43677\\WebstormProjects\\web-shop\\js\" />\r\n      <recent name=\"C:\\Users\\43677\\WebstormProjects\\web-shop\\css\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"13fe82f0-a9df-4888-8c3a-dc3b0ec5073a\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1624358651403</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1624358651403</updated>\r\n      <workItem from=\"1624358657739\" duration=\"10260000\" />\r\n      <workItem from=\"1624486708866\" duration=\"34000\" />\r\n      <workItem from=\"1624517966631\" duration=\"9568000\" />\r\n      <workItem from=\"1625052269207\" duration=\"1164000\" />\r\n      <workItem from=\"1625137914558\" duration=\"2038000\" />\r\n      <workItem from=\"1625223161288\" duration=\"959000\" />\r\n      <workItem from=\"1627843856869\" duration=\"1156000\" />\r\n      <workItem from=\"1642929785375\" duration=\"2888000\" />\r\n      <workItem from=\"1642938796864\" duration=\"15000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"updated  the help and impressum pages and fixed some other things.\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"updated  the help and impressum pages and fixed some other things.\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -2,19 +2,11 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="13fe82f0-a9df-4888-8c3a-dc3b0ec5073a" name="Default Changelist" comment="updated  the help and impressum pages and fixed some other things.">
+-      <change afterPath="$PROJECT_DIR$/css/bootstrap-icons.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/web-shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/web-shop.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/db-model/db_shop1.jpeg" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/db-model/db_shop_2.gif" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/db-model/tetsdb.jpg" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/help.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/impressum.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/impressum.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/products_administration.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products_administration.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,17 +21,23 @@
+       <list>
+         <option value="HTML File" />
+         <option value="CSS File" />
++        <option value="JavaScript File" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="main" />
++        <entry key="$PROJECT_DIR$" value="dev/rado" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/pages/login.html" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/pages/register.html" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/pages/help.html" root0="FORCE_HIGHLIGHTING" />
++  </component>
+   <component name="ProjectId" id="1uIgjEGIkL5rfbV7Mh00UxVG6Z4" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -102,7 +100,6 @@
+         </entry>
+       </map>
+     </option>
+-    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="updated  the help and impressum pages and fixed some other things." />
+Index: .idea/web-shop.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"WEB_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/temp\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/.tmp\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/tmp\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/web-shop.iml b/.idea/web-shop.iml
+--- a/.idea/web-shop.iml	
++++ b/.idea/web-shop.iml	
+@@ -8,5 +8,6 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="jquery" level="application" />
+   </component>
+ </module>
+\ No newline at end of file

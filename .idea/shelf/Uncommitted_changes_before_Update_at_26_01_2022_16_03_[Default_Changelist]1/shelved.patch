@@ -1,0 +1,63 @@
+Index: pages/private.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\"\r\n        content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\r\n  <title>Login</title>\r\n  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>\r\n  <script>\r\n    function signIn () {\r\n      const email = $('#email').val();\r\n      const password = $('#password').val();\r\n\r\n      $.ajax({\r\n        method: 'POST',\r\n        url: 'http://localhost:8080/login',\r\n        data: JSON.stringify({\r\n          email: email,\r\n          password,\r\n        }),\r\n        headers: {\r\n          Authorization: 'application/json',\r\n        },\r\n        error: function (data) {\r\n          // sessionStorage.setItem('token', data.token);\r\n          sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');\r\n          // $(location).prop('href');\r\n          window.location.href = 'private.html';\r\n        },\r\n      });\r\n    }\r\n\r\n    $(document).ready(function() {\r\n      $('#login').click(signIn);\r\n    });\r\n  </script>\r\n</head>\r\n<body>\r\n<form>\r\n  <div>\r\n    <label for=\"email\">Email:</label>\r\n    <input id=\"email\" name=\"email\" type=\"email\" />\r\n  </div>\r\n  <div>\r\n    <label for=\"password\">Passwort:</label>\r\n    <input id=\"password\" name=\"password\" type=\"password\" />\r\n  </div>\r\n  <div>\r\n    <button type=\"submit\" id=\"login\">\r\n      Sign in\r\n    </button>\r\n  </div>\r\n</form>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pages/private.html b/pages/private.html
+--- a/pages/private.html	
++++ b/pages/private.html	
+@@ -22,11 +22,11 @@
+         headers: {
+           Authorization: 'application/json',
+         },
+-        error: function (data) {
++        success: function (data) {
+           // sessionStorage.setItem('token', data.token);
+           sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
+           // $(location).prop('href');
+-          window.location.href = 'private.html';
++          window.location.href = '../index.html';
+         },
+       });
+     }
+Index: pages/login.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\"/>\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\r\n    <link\r\n            href=\"../css/bootstrap.min.css\"\r\n            rel=\"stylesheet\"\r\n    />\r\n    <link\r\n            rel=\"stylesheet\"\r\n            href=\"../css/bootstrap-icons.css\"\r\n    />\r\n    <link rel=\"stylesheet\" href=\"../css/style.css\"/>\r\n    <script src=\"../js/main.js\"></script>\r\n    <title>Login</title>\r\n</head>\r\n\r\n<body>\r\n\r\n<!-- Navbar -->\r\n<nav class=\"navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top\">\r\n    <div class=\"container\">\r\n        <a href=\"../index.html\" class=\"navbar-brand\">Matt & Rado</a>\r\n\r\n        <button\r\n                class=\"navbar-toggler\"\r\n                type=\"button\"\r\n                data-bs-toggle=\"collapse\"\r\n                data-bs-target=\"#navmenu\"\r\n        >\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n\r\n        <div class=\"collapse navbar-collapse\" id=\"navmenu\"></div>\r\n    </div>\r\n</nav>\r\n<!-- Navbar end -->\r\n\r\n<!-- Log in -->\r\n<main class=\"form-signin\">\r\n    <form>\r\n        <h1 class=\"h1 my-3 fw-normal\">Please sign in</h1>\r\n        <div class=\"form-floating my-1\">\r\n            <input type=\"text\" class=\"form-control\" id=\"username\" placeholder=\"name@example.com\">\r\n            <label for=\"username\">Username</label>\r\n        </div>\r\n        <div class=\"form-floating my-1\">\r\n            <input type=\"password\" class=\"form-control\" id=\"password\" placeholder=\"Password\">\r\n            <label for=\"password\">Password</label>\r\n        </div>\r\n\r\n        <button class=\"w-100 btn btn-lg btn-primary mt-3\" type=\"submit\">Sign in</button>\r\n    </form>\r\n</main>\r\n<!-- Log in end -->\r\n\r\n\r\n<!-- Footer -->\r\n<footer id=\"footer\">\r\n\r\n</footer>\r\n\r\n<script src=\"../js/bootstrap.min.js\"></script>\r\n<script src=\"../js/jquery.min.js\"></script>\r\n<script src=\"../js/main.js\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pages/login.html b/pages/login.html
+--- a/pages/login.html	
++++ b/pages/login.html	
+@@ -51,7 +51,7 @@
+             <label for="password">Password</label>
+         </div>
+ 
+-        <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Sign in</button>
++        <button class="w-100 btn btn-lg btn-primary mt-3" id="LoginUser" type="submit">Sign in</button>
+     </form>
+ </main>
+ <!-- Log in end -->
+Index: js/main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>$(document).ready(function () {\r\n\r\n    $(\"#navmenu\").load(\"nav.html\");\r\n    $(\"#footer\").load(\"footer.html\");\r\n\r\n})
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/main.js b/js/main.js
+--- a/js/main.js	
++++ b/js/main.js	
+@@ -1,6 +1,7 @@
++/*
+ $(document).ready(function () {
+ 
+     $("#navmenu").load("nav.html");
+     $("#footer").load("footer.html");
+ 
+-})
+\ No newline at end of file
++})*/
