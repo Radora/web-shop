@@ -1,70 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link
-          href="../css/bootstrap.min.css"
-          rel="stylesheet"
-  />
-  <link
-          rel="stylesheet"
-          href="../css/bootstrap-icons.css"
-  />
-  <link rel="stylesheet" href="../css/style.css"/>
-  <title>User Administration</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            href="../css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="../css/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>User Administration</title>
 </head>
 
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
-  <div class="container">
-    <a href="../index.html" class="navbar-brand">Matt & Rado</a>
+    <div class="container">
+        <a href="../index.html" class="navbar-brand">Matt & Rado</a>
 
-    <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navmenu"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navmenu"></div>
-  </div>
+        <div class="collapse navbar-collapse" id="navmenu"></div>
+    </div>
 </nav>
 <!-- Navbar end -->
 
 <!-- Register -->
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class="manage-users-table row justify-content-center text-white mt-5">
-        <div class="col-auto">
-          <h1 class="">Manage users</h1>
+<div class="container main-container">
 
-          <table id="edit_users_table" class="table table-hover text-start text-white bg-secondary">
-            <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Firstname</th>
-              <th scope="col">Surname</th>
-              <th scope="col">Username</th>
-              <th scope="col">Email</th>
-              <th scope="col">Address</th>
-              <th scope="col">Roles</th>
-              <th scope="col">Active</th>
-              <th colspan="2" scope="col" class="text-center">Actions</th>
-            </tr>
-            </thead>
-            <tbody class="edit_users_table_body"></tbody>
-          </table>
+    <div class="row">
+        <h2 class="text-white text-center mt-4">Edit User</h2>
+        <div class="col-12 col-md-4">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Firstname</span>
+                <input id="user_edit_firstname" type="text" class="form-control">
+            </div>
         </div>
-      </div>
+        <div class="col-12 col-md-4">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Surname</span>
+                <input id="user_edit_surname" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Username</span>
+                <input id="user_edit_username" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Email</span>
+                <input id="user_edit_email" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Address</span>
+                <input id="user_edit_address" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text">Roles</span>
+                <input id="user_edit_roles" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="input-group input-group-sm mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="user_active_checkbox">
+                <label class="form-check-label text-white ms-2" for="user_active_checkbox">
+                    User Active
+                </label>
+                <button type="button" class="btn-edit-user btn btn-outline-info ms-5">Save</button>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="manage-users-table row justify-content-center text-white mt-5">
+                <div class="col-auto">
+                    <h1 class="">Manage users</h1>
+
+                    <table id="edit_users_table" class="table table-hover text-start text-white bg-secondary">
+                        <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Firstname</th>
+                            <th scope="col">Surname</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Roles</th>
+                            <th scope="col">Active</th>
+                            <th colspan="2" scope="col" class="text-center">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody class="edit_users_table_body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 

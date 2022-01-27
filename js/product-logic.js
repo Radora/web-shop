@@ -11,21 +11,14 @@ $(document).ready(function () {
 
         const productCategoryName = $('#new_product_cat').val();
         var productCategoryID;
-        var productCatData = {};
-        var productCategoryArray = [];
 
-        if (productCategoryName === 'Laptops'){
-            productCatData.id = 2;
-            productCatData.name = productCategoryName;
-            productCategoryArray.push(productCatData);
-        }else if (productCategoryName === 'Smartphones'){
-            productCatData.id = 1;
-            productCatData.name = productCategoryName;
-            productCategoryArray.push(productCatData);
-        }else if (productCategoryName === 'Desktops'){
-            productCatData.id = 3;
-            productCatData.name = productCategoryName;
-            productCategoryArray.push(productCatData);
+
+        if (productCategoryName === 'Laptops') {
+            productCategoryID = 2;
+        } else if (productCategoryName === 'Smartphones') {
+            productCategoryID = 1;
+        } else if (productCategoryName === 'Desktops') {
+            productCategoryID = 3;
         }
 
         var newProductObject = new Object();
@@ -34,7 +27,8 @@ $(document).ready(function () {
         newProductObject.desc = desc;
         newProductObject.price = price;
         newProductObject.onStock = onStock;
-        newProductObject.category = productCategoryArray;
+        newProductObject.categoryid =
+            newProductObject.category = productCategoryArray;
 
         var productJSON = JSON.stringify(newProductObject);
 
@@ -57,14 +51,13 @@ $(document).ready(function () {
         });
 
 
-        request.done(function( msg ) {
+        request.done(function (msg) {
             console.log('Success');
         });
 
-        request.fail(function( jqXHR, textStatus ) {
-            alert( "Request failed: " + textStatus );
+        request.fail(function (jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
         });
-
 
 
     }

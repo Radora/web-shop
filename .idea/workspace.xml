@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13fe82f0-a9df-4888-8c3a-dc3b0ec5073a" name="Default Changelist" comment="updated  the help and impressum pages and fixed some other things.">
-      <change afterPath="$PROJECT_DIR$/js/admin-page-users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/users_administration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin-page-products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products_administration.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products_administration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin-page-users.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin-page-users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/product-logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/product-logic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/users_administration.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/users_administration.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,7 @@
       <workItem from="1643108682227" duration="9765000" />
       <workItem from="1643184942138" duration="8742000" />
       <workItem from="1643206786587" duration="2626000" />
-      <workItem from="1643272568195" duration="3079000" />
+      <workItem from="1643272568195" duration="10970000" />
     </task>
     <servers />
   </component>

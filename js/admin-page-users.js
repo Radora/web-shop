@@ -5,9 +5,9 @@ $(document).ready(function () {
         type: 'GET',
         url: 'http://localhost:8080/users',
         mode: 'no-cors'
-    }).done(function( data ) {
+    }).done(function (data) {
 
-        for (let i = 0; i < data.length; i++){
+        for (let i = 0; i < data.length; i++) {
 
             let userID = data[i].id
             let userFirstname = data[i].firstname;
@@ -17,9 +17,6 @@ $(document).ready(function () {
             let userAddress = data[i].address;
             let userRoles = data[i].roles;
             let userActive = data[i].active;
-
-
-            //console.log(data[i])
 
             let htmlToAppend = '<tr><td class="user-id" scope="row">' + userID + '</td>';
             htmlToAppend += '<td class="user-firstname">' + userFirstname + '</td>';
@@ -47,20 +44,43 @@ $(document).ready(function () {
         var currentRow = $(this).closest("tr");
         var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
 
-            $.ajax({
-                type: 'DELETE',
-                url: 'http://localhost:8080/users/' + parseInt(id),
-                mode: 'no-cors'
-            }).done(function(  ) {
-                location.reload();
-            });
+        $.ajax({
+            type: 'DELETE',
+            url: 'http://localhost:8080/users/' + parseInt(id),
+            mode: 'no-cors'
+        }).done(function () {
+            location.reload();
+        });
 
     }
 
+    $("#edit_users_table").on('click', '.btn-edit-user', EditUser);
 
     function EditUser() {
         var currentRow = $(this).closest("tr");
         var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:8080/users/' + id,
+            mode: 'no-cors'
+        }).done(function (data) {
+
+            $('#user_edit_firstname').val(data.firstname);
+            $('#user_edit_surname').val(data.surname);
+            $('#user_edit_username').val(data.username);
+            $('#user_edit_email').val(data.email);
+            $('#user_edit_address').val(data.address);
+            $('#user_edit_roles').val(data.roles);
+
+            if (data.active){
+                $('#user_active_checkbox').prop('checked', true);
+            }else{
+                $('#user_active_checkbox').prop('checked', false);
+            }
+
+
+        });
 
     }
 
