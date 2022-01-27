@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13fe82f0-a9df-4888-8c3a-dc3b0ec5073a" name="Default Changelist" comment="updated  the help and impressum pages and fixed some other things.">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/admin-page-users.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin-page-users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/product-logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/product-logic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/users_administration.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/users_administration.html" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/private.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/private.html" afterDir="false" />
+>>>>>>> 97eac0b30fe3130476be027826c1bde32098c998
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +51,11 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pages/login.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/register.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pages/help.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1uIgjEGIkL5rfbV7Mh00UxVG6Z4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -115,7 +129,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated  the help and impressum pages and fixed some other things." />
