@@ -27,7 +27,7 @@ $(document).ready(function () {
         newProductObject.desc = desc;
         newProductObject.price = price;
         newProductObject.onStock = onStock;
-        newProductObject.categoryid =
+        newProductObject.categoryid = 1;
             newProductObject.category = productCategoryArray;
 
         var productJSON = JSON.stringify(newProductObject);
