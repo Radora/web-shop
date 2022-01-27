@@ -14,7 +14,7 @@ $(document).ready(function () {
             let productPrice = data[i].price;
             let productCategoryName = data[i].category.name;
 
-            let htmlToAppend = '<tr></tr><td class="product-id" scope="row">' + productId + '</td>';
+            let htmlToAppend = '<tr><td class="product-id" scope="row">' + productId + '</td>';
             htmlToAppend += '<td class="product-title">' + productTitle + '</td>';
             htmlToAppend += '<td class="product-price">' + productPrice + '</td>';
             htmlToAppend += '<td class="product-category">' + productCategoryName + '</td>';
@@ -26,6 +26,7 @@ $(document).ready(function () {
         }
     });
 
+
     // When admin click on delete in the products-table ->delete the product
     $("#edit_products_table").on('click', '.btn-delete-product', DeleteProduct);
 
@@ -33,9 +34,6 @@ $(document).ready(function () {
         // Getting value from the first cell -> the product ID
         var currentRow = $(this).closest("tr");
         var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
-        var asJson = JSON.stringify(id);
-
-        http://localhost:8080/products/1
 
         $.ajax({
             type: 'DELETE',

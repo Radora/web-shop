@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link
+          href="../css/bootstrap.min.css"
+          rel="stylesheet"
+  />
+  <link
+          rel="stylesheet"
+          href="../css/bootstrap-icons.css"
+  />
+  <link rel="stylesheet" href="../css/style.css"/>
+  <title>User Administration</title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+  <div class="container">
+    <a href="../index.html" class="navbar-brand">Matt & Rado</a>
+
+    <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu"></div>
+  </div>
+</nav>
+<!-- Navbar end -->
+
+<!-- Register -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="manage-users-table row justify-content-center text-white mt-5">
+        <div class="col-auto">
+          <h1 class="">Manage users</h1>
+
+          <table id="edit_users_table" class="table table-hover text-start text-white bg-secondary">
+            <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Firstname</th>
+              <th scope="col">Surname</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">Address</th>
+              <th scope="col">Roles</th>
+              <th scope="col">Active</th>
+              <th colspan="2" scope="col" class="text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody class="edit_users_table_body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Register end -->
+
+<!-- Footer -->
+<footer id="footer"></footer>
+
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/admin-page-users.js"></script>
+</body>
+</html>
