@@ -19,6 +19,8 @@
             rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
     <title>Matt&Rado Electronics</title>
 </head>
 <body>
@@ -38,15 +40,18 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
+           <!-- <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="pages/products.html" class="nav-link">Products</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item hidden-when-logged-in">
                     <a href="pages/login.html" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item hidden-when-logged-in">
+                    <Button class="nav-link btn-dark">Logout</Button>
                 </li>
                 <li class="nav-item">
                     <a href="pages/register.html" class="nav-link">Register</a>
@@ -63,7 +68,7 @@
                 <li class="nav-item">
                     <a href="pages/users_administration.html" class="nav-link">USERS</a>
                 </li>
-            </ul>
+            </ul>-->
         </div>
     </div>
 </nav>
@@ -84,7 +89,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"
 ></script>
+
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.min.js"></script>
 </body>
 </html>
