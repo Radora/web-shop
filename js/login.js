@@ -5,7 +5,7 @@ $(document).ready(function () {
         const username = $('#username').val();
         const password = $('#password').val();
 
-        $.ajax({
+       $.ajax({
             method: 'POST',
             xhrFields: {
                 withCredentials: true
@@ -18,14 +18,13 @@ $(document).ready(function () {
             headers: {
                 Authorization: 'application/json',
             },
-            error: function (data) {
+            success: function (data) {
                 // sessionStorage.setItem('token', data.token);
-                sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
+                //sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
                 // $(location).prop('href');
-                window.location.href = '../index.html';
+                sessionStorage.setItem('username', data.username);
+                window.location.href = "../pages/index.html";
             },
         });
     });
-
-
 });

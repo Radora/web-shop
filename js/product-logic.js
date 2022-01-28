@@ -8,7 +8,6 @@ $(document).ready(function () {
         const desc = $('#new_product_desc').val();
         const price = $('#new_product_price').val();
         const onStock = $('#new_product_stock').val();
-
         const productCategoryName = $('#new_product_cat').val();
         var productCategoryID;
 
@@ -27,14 +26,14 @@ $(document).ready(function () {
         newProductObject.desc = desc;
         newProductObject.price = price;
         newProductObject.onStock = onStock;
-        newProductObject.categoryid = 1;
-            newProductObject.category = productCategoryArray;
+        //newProductObject.categoryid = 1;
+        newProductObject.category = productCategoryName;
 
         var productJSON = JSON.stringify(newProductObject);
 
         var jsonTest = ' {"category" : { "id" : 1, "name" : "Smartphones"}, "name" : "Iphone 16", "description" : "Description", "price" : 500 , "product_stock" : 10}';
 
-        console.log(jsonTest);
+        console.log(newProductObject);
 
 
         // INSERT INTO `product`(`id`, `description`, `name`, `price`, `product_stock`, `categoryid`)
@@ -44,12 +43,14 @@ $(document).ready(function () {
         var request = $.ajax({
             method: 'POST',
             url: 'http://localhost:8080/products/new',
-            data: jsonTest,
+            data: newProductObject,
             headers: {
+                //Authorization: 'application/json'
                 'Content-Type': 'application/json',
             }
         });
 
+        console.log(newProductObject);
 
         request.done(function (msg) {
             console.log('Success');

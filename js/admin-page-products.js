@@ -4,6 +4,9 @@ $(document).ready(function () {
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/products',
+        xhrFields:{
+            withCredentials:true
+        },
         mode: 'no-cors'
     }).done(function( data ) {
 
@@ -12,7 +15,7 @@ $(document).ready(function () {
             let productId = data[i].id
             let productTitle = data[i].name;
             let productPrice = data[i].price;
-            let productCategoryName = data[i].category.name;
+            let productCategoryName = data[i].category;
 
             let htmlToAppend = '<tr><td class="product-id" scope="row">' + productId + '</td>';
             htmlToAppend += '<td class="product-title">' + productTitle + '</td>';
@@ -20,12 +23,10 @@ $(document).ready(function () {
             htmlToAppend += '<td class="product-category">' + productCategoryName + '</td>';
             htmlToAppend += '<td><button type="button" class="btn-delete-product btn btn-outline-danger">Delete</button></td>'
             htmlToAppend += '<td><button type="button" class="btn-edit-product btn btn-outline-info">Edit</button></td></tr>'
-
             $('#edit_products_table > tbody:first').append(htmlToAppend)
 
         }
     });
-
 
     // When admin click on delete in the products-table ->delete the product
     $("#edit_products_table").on('click', '.btn-delete-product', DeleteProduct);
@@ -38,12 +39,14 @@ $(document).ready(function () {
         $.ajax({
             type: 'DELETE',
             url: 'http://localhost:8080/products/' + id,
+            xhrFields:{
+                withCredentials:true
+            },
             mode: 'no-cors'
         }).done(function(  ) {
             location.reload();
         });
     }
-
 
     function EditProduct() {
 
@@ -54,8 +57,5 @@ $(document).ready(function () {
         var asJson = JSON.stringify(id);
 
         console.log(asJson);
-
-
     }
-
 })

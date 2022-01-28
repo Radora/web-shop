@@ -35,9 +35,9 @@ function RegisterNewUser() {
         }
     });
 
-
     request.done(function( msg ) {
        console.log('Success');
+        window.location.href = '../pages/index.html';
     });
 
     request.fail(function( jqXHR, textStatus ) {

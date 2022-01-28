@@ -4,6 +4,9 @@ $(document).ready(function () {
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/users',
+        xhrFields:{
+            withCredentials:true
+        },
         mode: 'no-cors'
     }).done(function (data) {
 
@@ -34,7 +37,6 @@ $(document).ready(function () {
         }
     });
 
-
     // When admin click on delete in the products-table ->delete the product
     $("#edit_users_table").on('click', '.btn-delete-user', DeleteUser);
 
@@ -47,6 +49,9 @@ $(document).ready(function () {
         $.ajax({
             type: 'DELETE',
             url: 'http://localhost:8080/users/' + parseInt(id),
+            xhrFields:{
+                withCredentials:true
+            },
             mode: 'no-cors'
         }).done(function () {
             location.reload();
@@ -63,6 +68,9 @@ $(document).ready(function () {
         $.ajax({
             type: 'GET',
             url: 'http://localhost:8080/users/' + id,
+            xhrFields:{
+                withCredentials:true
+            },
             mode: 'no-cors'
         }).done(function (data) {
 
@@ -81,7 +89,6 @@ $(document).ready(function () {
 
         });
     }
-
 
     // Saving user edits
     $('#save_user_edits').click(function (e) {
@@ -128,16 +135,15 @@ $(document).ready(function () {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                xhrFields:{
+                    withCredentials:true
+                },
                 mode: 'no-cors'
             }).done(function () {
                 location.reload();
             });
-
-
         } else {
             alert('Please set correct values first!');
         }
-
     });
-
 })
