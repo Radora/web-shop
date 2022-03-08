@@ -22,7 +22,7 @@ body{
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
     color: pink;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .main-header{

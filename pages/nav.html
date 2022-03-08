@@ -1,3 +1,14 @@
+<script>
+  if(sessionStorage.getItem("username")) {
+  //user logged in
+  $('.hidden-when-logged-in').hide();
+}
+else {
+  //user logged out
+  $('.hidden-when-logged-out').hide();
+}
+</script>
+
 <ul class="navbar-nav ms-auto">
   <li class="nav-item">
     <a href="index.html" class="nav-link">Home</a>
@@ -7,6 +18,9 @@
   </li>
   <li class="nav-item hidden-when-logged-in">
     <a href="login.html" class="nav-link">Login</a>
+  </li>
+  <li class="nav-item hidden-when-logged-out">
+    <a class="nav-link" id="logout">Logout</a>
   </li>
   <li class="nav-item">
     <a href="register.html" class="nav-link">Register</a>
@@ -18,12 +32,9 @@
     <a href="help.html" class="nav-link">Help</a>
   </li>
   <li class="nav-item">
-    <a href="products_administration.html" class="nav-link">PRODUCTS</a>
+    <a href="products_administration.html" class="nav-link">Products</a>
   </li>
   <li class="nav-item">
-    <a href="users_administration.html" class="nav-link">USERS</a>
-  </li>
-  <li class="nav-item hidden-when-logged-out">
-    <Button class="nav-link btn-dark" id="logout">Logout</Button>
+    <a href="users_administration.html" class="nav-link">Users</a>
   </li>
 </ul>

@@ -5,15 +5,6 @@ $(document).ready(function () {
 
 });
 
-if(sessionStorage.getItem("username")) {
-    //user logged in
-    $('.hidden-when-logged-in').hide();
-}
-else {
-    //user logged out
-    $('.hidden-when-logged-out').hide();
-}
-
 $(document).on('click',"#logout",function (){
     $.ajax ({
         method: "GET",
