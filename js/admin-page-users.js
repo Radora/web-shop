@@ -96,12 +96,13 @@ $(document).ready(function () {
         //Check if all fields contain value
         if ($('#user_edit_firstname').val() && $('#user_edit_surname').val() &&
             $('#user_edit_username').val() && $('#user_edit_email').val() &&
-            $('#user_edit_address').val() && $('#user_edit_roles').val() && $('#user_edit_id').val()) {
+            $('#user_edit_address').val() && $('#user_edit_roles').val() && $('#user_edit_password').val() && $('#user_edit_id').val()) {
 
             let userFirstname = $('#user_edit_firstname').val();
             let userSurname = $('#user_edit_surname').val();
             let username = $('#user_edit_username').val();
             let userEmail = $('#user_edit_email').val();
+            let userPassword = $('#user_edit_password').val();
             let userAddress = $('#user_edit_address').val();
             let userRoles = $('#user_edit_roles').val();
             let userId = $('#user_edit_id').val();
@@ -119,7 +120,7 @@ $(document).ready(function () {
             newUserObject.surname = userSurname;
             newUserObject.username = username;
             newUserObject.email = userEmail;
-            newUserObject.password = "pass";
+            newUserObject.password = userPassword;
             newUserObject.address = userAddress;
             newUserObject.active = userActive;
             newUserObject.roles = userRoles;
