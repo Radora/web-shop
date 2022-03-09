@@ -4,23 +4,22 @@
   $('.hidden-when-logged-in').hide();
 }
 else {
-  //user logged out
-  $('.hidden-when-logged-out').hide();
-
-
-  /*$.ajax({
+    //user logged out
+    $('.hidden-when-logged-out').hide();
+  }
+if (sessionStorage.getItem("username")){
+  $.ajax({
     type: 'GET',
-    url: 'http://localhost:8080/users/' + sessionStorage.getItem("username"),
+    url: 'http://localhost:8080/users/getUsername/' + sessionStorage.getItem("username"),
     xhrFields:{
       withCredentials:true
     },
     mode: 'no-cors'
-  }).done(function (data) {console.log(data)});
-
-  if (sessionStorage.getItem("roles")){
-  //
-  $('.hidden-when-not-Admin').hide();*/
-
+  }).done(function (data) {
+    if (data.roles == "ROLE_USER") {
+      $('.hidden-when-not-Admin').hide();
+    }
+  })
 }
 
 </script>

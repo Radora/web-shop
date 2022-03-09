@@ -16,10 +16,12 @@ $(document).ready(function () {
             let productTitle = data[i].name;
             let productPrice = data[i].price;
             let productCategoryName = data[i].category;
+            let productStock = data[i].product_stock;
 
             let htmlToAppend = '<tr><td class="product-id" scope="row">' + productId + '</td>';
             htmlToAppend += '<td class="product-title">' + productTitle + '</td>';
             htmlToAppend += '<td class="product-price">' + productPrice + '</td>';
+            htmlToAppend += '<td class="product-stock">' + productStock + '</td>';
             htmlToAppend += '<td class="product-category">' + productCategoryName + '</td>';
             htmlToAppend += '<td><button type="button" class="btn-delete-product btn btn-outline-danger">Delete</button></td>'
             htmlToAppend += '<td><button type="button" class="btn-edit-product btn btn-outline-info">Edit</button></td></tr>'
