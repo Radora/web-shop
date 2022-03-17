@@ -7,6 +7,9 @@ else {
     //user logged out
     $('.hidden-when-logged-out').hide();
   }
+
+  $('.hidden-when-not-Admin').hide();
+
 if (sessionStorage.getItem("username")){
   $.ajax({
     type: 'GET',
@@ -16,8 +19,8 @@ if (sessionStorage.getItem("username")){
     },
     mode: 'no-cors'
   }).done(function (data) {
-    if (data.roles == "ROLE_USER") {
-      $('.hidden-when-not-Admin').hide();
+    if (data.roles == "ROLE_ADMIN") {
+      $('.hidden-when-not-Admin').show();
     }
   })
 }
