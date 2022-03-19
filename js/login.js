@@ -6,7 +6,7 @@ $(document).ready(function () {
         const password = $('#password').val();
 
 
-       $.ajax({
+        $.ajax({
             method: 'POST',
             xhrFields: {
                 withCredentials: true
@@ -25,10 +25,6 @@ $(document).ready(function () {
                 // $(location).prop('href');
 
                 sessionStorage.setItem('username', username);
-
-                //function to show nav items depending on user
-                updateNavbarDependingOnUserRole();
-
                 window.location.href = "../pages/index.html";
             },
         });

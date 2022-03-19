@@ -28,32 +28,4 @@ $(document).on('click', "#logout", function () {
 });
 
 
-function updateNavbarDependingOnUserRole() {
-    if (sessionStorage.getItem("username")) {
-        //user logged in
-        $('.hidden-when-logged-in').hide();
-    } else {
-        //user logged out
-        $('.hidden-when-logged-out').hide();
-    }
-
-    $('.hidden-when-not-Admin').hide();
-
-    if (sessionStorage.getItem("username")) {
-        $.ajax({
-            type: 'GET',
-            url: 'http://localhost:8080/users/getUsername/' + sessionStorage.getItem("username"),
-            xhrFields: {
-                withCredentials: true
-            },
-            mode: 'no-cors'
-        }).done(function (data) {
-            if (data.roles == "ROLE_ADMIN") {
-                $('.hidden-when-not-Admin').show();
-            }
-        })
-    }
-}
-
-
 
