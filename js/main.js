@@ -26,3 +26,22 @@ $(document).on('click',"#logout",function (){
 });
 
 
+function updateNavbarDependingOnUserRole(){
+    $.ajax ({
+        method: "GET",
+        url: "http://localhost:8080/users/getUsername/" + sessionStorage.getItem('username'),
+        xhrFields:{
+            withCredentials: true,
+        },
+        success: function (data) {
+            console.log(data)
+            // window.location.href= '../pages/login.html';
+        },
+        error: function () {
+            alert('Error getting user data from getUsername root');
+        }
+        //e.preventDefault();
+        //var token = $("meta[name='_csrf']").attr("content");
+    })
+}
+

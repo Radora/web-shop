@@ -16,7 +16,6 @@ if (sessionStorage.getItem("username")){
     url: 'http://localhost:8080/users/getUsername/' + sessionStorage.getItem("username"),
     xhrFields:{
       withCredentials:true
-
     },
     mode: 'no-cors'
   }).done(function (data) {

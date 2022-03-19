@@ -5,6 +5,7 @@ $(document).ready(function () {
         const username = $('#username').val();
         const password = $('#password').val();
 
+
        $.ajax({
             method: 'POST',
             xhrFields: {
@@ -22,8 +23,14 @@ $(document).ready(function () {
                 // sessionStorage.setItem('token', data.token);
                 //sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
                 // $(location).prop('href');
+
                 sessionStorage.setItem('username', username);
-                window.location.href = "../pages/index.html";
+
+                updateNavbarDependingOnUserRole();
+
+                //function to show nav items depending on user
+
+                //window.location.href = "../pages/index.html";
             },
         });
     });

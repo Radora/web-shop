@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>Smartphones</title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">Matt & Rado</a>
+
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu"></div>
+    </div>
+</nav>
+<!-- Navbar end -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="manage-products-table row justify-content-center text-white">
+
+                <h1 class="mb-3">Desktops</h1>
+
+                <table id="desktops_table" class="table table-responsive text-start text-white bg-secondary">
+                    <thead>
+                    <tr>
+                        <th scope="col"><span>&#35;</span></th>
+                        <th scope="col">Title/Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col" class="text-center">Picture</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock</th>
+                        <th colspan="2" scope="col" class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody class="desktops_table_body">
+                    <!--ToDo: Replace with actual data from DB-->
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Lenovo ThinkCentre M70s</td>
+                        <td>Intel® Core™ i5-10400 Prozessor (bis zu 4,30 GHz), Hexa-Core
+                            8 GB RAM, 256 GB SSD, DVD Brenner
+                            Intel UHD 630 Grafik, HDMI, DisplayPort
+                            Formfaktor: Small Form Factor, Giga LAN, Card Reader
+                            Windows 10 Professional 64 Bit
+                        </td>
+                        <td>
+                            <a href="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_82880750/fee_786_587_png"
+                               data-fancybox="gallery"
+                               data-caption="Lenovo ThinkCentre M70s">
+                                <img src="https://assets.mmsrg.com/isr/166325/c1/-/ASSET_MMS_82880750/fee_786_587_png"
+                                     alt=""
+                                     style="max-width: 150px; max-height: 100px">
+                            </a>
+                        </td>
+                        <td class="text-center">699€</td>
+                        <td class="text-center">17</td>
+                        <td>
+                            <button type="button" class="btn-add-to-cart btn bg-success text-white">Add</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer"></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
