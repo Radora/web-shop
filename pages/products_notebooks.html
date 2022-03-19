@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>Smartphones</title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">Matt & Rado</a>
+
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu"></div>
+    </div>
+</nav>
+<!-- Navbar end -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="manage-products-table row justify-content-center text-white">
+
+                <h1 class="mb-3">Notebooks</h1>
+
+                <table id="notebooks_table" class="table table-responsive text-start text-white bg-secondary">
+                    <thead>
+                    <tr>
+                        <th scope="col"><span>&#35;</span></th>
+                        <th scope="col">Title/Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col" class="text-center">Picture</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Stock</th>
+                        <th colspan="2" scope="col" class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody class="notebooks_table_body">
+                    <!--ToDo: Replace with actual data from DB-->
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Apple MacBook Pro 13" MYD92D/A</td>
+                        <td>Der Apple M1 Chip definiert das 13" MacBook Pro neu. Mit einer 8-Core CPU, die komplexe
+                            Workflows beim Arbeiten mit Fotos, Programmieren, Videoschnitt und mehr noch schneller
+                            macht. Einer unglaublichen 8-Core GPU, die grafikintensive Aufgaben superschnell erledigt
+                            und nahtloses Gaming ermöglicht. Einer fortschrittlichen 16-Core Neural Engine für mehr
+                            Leistung beim maschinellen Lernen in deinen Lieblingsapps. Superschnellem gemeinsamen
+                            Arbeitsspeicher für eine flüssige Performance. Und bis zu 20 Stunden Batterielaufzeit², der
+                            längsten, die es je bei einem Mac gab.
+                        </td>
+                        <td>
+                            <a href="https://media.nbb-cdn.de/images/products/680000/687210/Mac_Pro_13_Spacegrau_2.png?size=2800"
+                               data-fancybox="gallery"
+                               data-caption="Lenovo ThinkCentre M70s">
+                                <img src="https://media.nbb-cdn.de/images/products/680000/687210/Mac_Pro_13_Spacegrau_2.png?size=2800"
+                                     alt="MacBook Pro 13"
+                                     style="max-width: 150px; max-height: 100px">
+                            </a>
+                        </td>
+                        <td class="text-center">1449€</td>
+                        <td class="text-center">15</td>
+                        <td>
+                            <button type="button" class="btn-add-to-cart btn bg-success text-white">Add</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer"></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

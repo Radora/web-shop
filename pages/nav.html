@@ -1,58 +1,73 @@
 <script>
-  if(sessionStorage.getItem("username")) {
-  //user logged in
-  $('.hidden-when-logged-in').hide();
-}
-else {
-    //user logged out
-    $('.hidden-when-logged-out').hide();
-  }
-
-  $('.hidden-when-not-Admin').hide();
-
-if (sessionStorage.getItem("username")){
-  $.ajax({
-    type: 'GET',
-    url: 'http://localhost:8080/users/getUsername/' + sessionStorage.getItem("username"),
-    xhrFields:{
-      withCredentials:true
-    },
-    mode: 'no-cors'
-  }).done(function (data) {
-    if (data.roles == "ROLE_ADMIN") {
-      $('.hidden-when-not-Admin').show();
+    if (sessionStorage.getItem("username")) {
+        //user logged in
+        $('.hidden-when-logged-in').hide();
+    } else {
+        //user logged out
+        $('.hidden-when-logged-out').hide();
     }
-  })
-}
+    if (sessionStorage.getItem("username")) {
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:8080/users/getUsername/' + sessionStorage.getItem("username"),
+            xhrFields: {
+                withCredentials: true
+            },
+            mode: 'no-cors'
+        }).done(function (data) {
+            if (data.roles == "ROLE_USER") {
+                $('.hidden-when-not-Admin').hide();
+            }
+        })
+    }
 
 </script>
 
 <ul class="navbar-nav ms-auto">
-  <li class="nav-item">
-    <a href="index.html" class="nav-link">Home</a>
-  </li>
-  <li class="nav-item">
-    <a href="products.html" class="nav-link">Products</a>
-  </li>
-  <li class="nav-item hidden-when-logged-in">
-    <a href="login.html" class="nav-link">Login</a>
-  </li>
-  <li class="nav-item hidden-when-logged-out">
-    <a class="nav-link" id="logout">Logout</a>
-  </li>
-  <li class="nav-item">
-    <a href="register.html" class="nav-link">Register</a>
-  </li>
-  <li class="nav-item">
-    <a href="impressum.html" class="nav-link">Legal Notice</a>
-  </li>
-  <li class="nav-item">
-    <a href="help.html" class="nav-link">Help</a>
-  </li>
-  <li class="nav-item hidden-when-not-Admin">
-    <a href="products_administration.html" class="nav-link">Products</a>
-  </li>
-  <li class="nav-item hidden-when-not-Admin">
-    <a href="users_administration.html" class="nav-link">Users</a>
-  </li>
+    <li class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+        <a href="products.html" class="nav-link">Products</a>
+    </li>
+    <li class="nav-item hidden-when-logged-in">
+        <a href="login.html" class="nav-link">Login</a>
+    </li>
+    <li class="nav-item hidden-when-logged-out">
+        <a class="nav-link" id="logout">Logout</a>
+    </li>
+    <li class="nav-item">
+        <a href="register.html" class="nav-link">Register</a>
+    </li>
+    <li class="nav-item">
+        <a href="help.html" class="nav-link">Help</a>
+    </li>
+    <li class="nav-item hidden-when-not-Admin">
+        <a href="products_administration.html" class="nav-link">Products-Admin</a>
+    </li>
+    <li class="nav-item hidden-when-not-Admin">
+        <a href="users_administration.html" class="nav-link">Users</a>
+    </li>
+    <li class="nav-item ms-5">
+        <a href="#" class="nav-link">
+            <i class="fa fa-shopping-cart fs-5"></i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <div class="btn-group">
+            <button type="button" class="btn nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                <i class="fa fa-user fs-5"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="user_profile.html">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">My Orders</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </li>
 </ul>
+

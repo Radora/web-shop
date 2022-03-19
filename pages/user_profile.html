@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            href="../css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>My Profile</title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">Matt & Rado</a>
+
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu"></div>
+    </div>
+</nav>
+<!-- Navbar end -->
+<!--ToDo: Fix spacing with class-->
+<section class="user-profile mt-5 pt-5">
+    <div class="container h-100 bg-c-lite-blue border-50 p-5">
+        <div class="row">
+
+            <!--Left side-->
+            <div class="col-12 col-md-5 position-relative d-flex flex-column justify-content-center align-items-center p-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="user_img mb-4" style="height: 150px; width: 150px;
+                         background-position: center center;
+                         background-size: cover;
+                         background-image: url(https://www.pngrepo.com/png/294826/512/user-profile.png)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h6>Max Mustermann</h6>
+                        <p>UserID: #132</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Right side-->
+            <div class="col-12 col-md-7 p-4">
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Firstname</span>
+                            <input id="user_profile_firstname" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Surname</span>
+                            <input id="user_profile_surname" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Username</span>
+                            <input id="user_profile_username" type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input id="user_profile_email" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group input-group-sm mb-3">
+                            <span class="input-group-text">Address</span>
+                            <input id="user_profile_address" type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-around mt-5">
+                    <div class="d-inline-block">
+                        <button type="button" class="btn btn-warning">Change password</button>
+                    </div>
+                    <div class="d-inline-block">
+                        <button type="button" class="btn btn-primary">Edit</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer"></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

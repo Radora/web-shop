@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("../img/background-main.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -11,12 +11,12 @@ body{
     overflow: auto;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-size: 25px;
 }
 
-.navbar-brand:hover{
-    color: pink!important;
+.navbar-brand:hover {
+    color: pink !important;
 }
 
 .navbar-nav .nav-item.active .nav-link,
@@ -25,7 +25,7 @@ body{
     font-size: 16px;
 }
 
-.main-header{
+.main-header {
     color: white;
     margin: calc(10vh - 40px) auto 50px auto;
     font-size: 40px;
@@ -37,24 +37,25 @@ body{
 }
 
 #footer {
-    bottom : 0px;
-    height : 30px;
+    bottom: 0px;
+    height: 30px;
     background: black;
     color: white;
     text-align: center;
     vertical-align: middle;
-    position:fixed;
-    width:100%;
+    position: fixed;
+    width: 100%;
 }
 
-#footer a{
+#footer a {
     color: white;
 }
-#footer a:hover{
+
+#footer a:hover {
     color: pink;
 }
 
-#footer a+a{
+#footer a + a {
     margin-left: 30px;
 }
 
@@ -67,32 +68,33 @@ body{
 
 @media only screen and (max-width: 768px) {
 
-    .main-header{
+    .main-header {
         font-size: 30px;
     }
 
-    .card-img-top{
+    .card-img-top {
         height: 45vw;
     }
 }
 
-.impressum{
+.impressum {
     text-align: center;
     margin-left: 0vh;
     color: white;
 }
 
-.help{
+.help {
     margin-left: 5vh;
     margin-top: 5vh;
     text-align: left;
     color: white;
 }
-.help a{
+
+.help a {
     color: white;
 }
 
-.help a:hover{
+.help a:hover {
     color: pink;
 }
 
@@ -104,10 +106,28 @@ body{
     padding: 15px;
     color: white;
 }
-.form-floating{
+
+.form-floating {
     color: black;
 }
 
-.manage-products-table{
+.manage-products-table {
     margin-top: 75px;
+}
+
+.btn-add-to-cart {
+    transition-duration: 0.4s !important;
+}
+
+.btn-add-to-cart:hover {
+    background-color: blue !important;
+}
+
+.bg-c-lite-blue {
+    background: -webkit-gradient(linear, left top, right top, from(#88898c), to(#dedfe3));
+    background: linear-gradient(to right, #dedfe3, #88898c)
+}
+
+.border-50 {
+    border-radius: 50px;
 }
