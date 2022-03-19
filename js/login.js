@@ -26,11 +26,10 @@ $(document).ready(function () {
 
                 sessionStorage.setItem('username', username);
 
+                //function to show nav items depending on user
                 updateNavbarDependingOnUserRole();
 
-                //function to show nav items depending on user
-
-                //window.location.href = "../pages/index.html";
+                window.location.href = "../pages/index.html";
             },
         });
     });
