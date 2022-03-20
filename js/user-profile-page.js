@@ -27,7 +27,6 @@ function updateUserProfileFields(data) {
     $('#user_profile_username').val(data.username);
     $('#user_profile_email').val(data.email);
     $('#user_profile_address').val(data.address);
-
 }
 
 
