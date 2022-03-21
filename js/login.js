@@ -27,6 +27,12 @@ $(document).ready(function () {
                 sessionStorage.setItem('username', username);
                 window.location.href = "../pages/index.html";
             },
+            error: function (data) {
+                alert('User not found!');
+            },
+
         });
+
+
     });
 });

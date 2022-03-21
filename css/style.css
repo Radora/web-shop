@@ -111,3 +111,6 @@ body {
     border-radius: 50px;
 }
 
+.itemsCount{
+    bottom: 10px;
+}

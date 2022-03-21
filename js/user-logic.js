@@ -35,13 +35,12 @@ function RegisterNewUser() {
         }
     });
 
-    request.done(function( msg ) {
-       console.log('Success');
-        window.location.href = '../pages/index.html';
+    request.done(function (msg) {
+        if (!alert("New User registered. You can login now!")) document.location = '../pages/index.html';
     });
 
-    request.fail(function( jqXHR, textStatus ) {
-        alert( "Request failed: " + textStatus );
+    request.fail(function (jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
     });
 
 }

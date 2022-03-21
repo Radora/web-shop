@@ -3,6 +3,10 @@ $(document).ready(function () {
     $("#navmenu").load("nav.html");
     $("#footer").load("footer.html");
 
+    setTimeout(() => {
+        updateCartItemsCount()
+    }, 50);
+
 });
 
 
@@ -27,5 +31,17 @@ $(document).on('click', "#logout", function () {
     })
 });
 
+
+function updateCartItemsCount() {
+
+    let cartItemsNumber = localStorage.getItem('cartItemsCount');
+    cartItemsNumber = parseInt(cartItemsNumber);
+
+    if (cartItemsNumber) {
+        // there are items in storage
+        document.querySelector('.itemsCount').textContent = cartItemsNumber;
+    }
+
+}
 
 
