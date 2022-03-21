@@ -48,13 +48,15 @@ function displayCartItemsFromLocalStorage() {
 function removeItemFromCart() {
 
     // get the current row
-    let currentRow = $(this).closest("tr").find();
+    let currentRow = $(this).closest("tr");
     let itemTitle = currentRow.find(".item_title").html();
 
     let cartTotal = parseInt(localStorage.getItem('totalCost'));
     let cartItemsCount = parseInt(localStorage.getItem('cartItemsCount'));
 
     let itemToRemove = JSON.parse(localStorage.getItem(itemTitle));
+    console.log(itemTitle);
+
     let itemToRemovePrice = itemToRemove.price;
     let itemToRemoveCount = itemToRemove.count;
 
@@ -69,6 +71,7 @@ function removeItemFromCart() {
         localStorage.removeItem(itemTitle);
 
     } else {  // Last item in basket, clear storage
+
         localStorage.removeItem(itemTitle);
         localStorage.removeItem("totalCost");
         localStorage.removeItem("cartItemsCount");
@@ -127,9 +130,7 @@ function removeSingleItemFromCart() {
 
     }
 
-
     location.reload();
-
     console.log(itemToRemove.count);
 
 
