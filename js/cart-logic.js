@@ -1,8 +1,9 @@
+
 $(document).ready(function () {
 
     $("#products_table").on('click', '.addToCart', function () {
 
-        // get the current row
+        // get the current row data
         let currentRow = $(this).closest("tr");
         let itemPrice = currentRow.find(".item_price").html();
         let itemTitle = currentRow.find(".item_title").html();

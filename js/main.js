@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     setTimeout(() => {
         updateCartItemsCount()
-    }, 50);
+    }, 75);
 
 });
 
@@ -19,8 +19,8 @@ $(document).on('click', "#logout", function () {
             withCredentials: true,
         },
         success: function (data) {
-            console.log("logout")
             sessionStorage.removeItem('username')
+            localStorage.clear();
             window.location.href = '../pages/index.html';
         },
         error: function () {
