@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>Checkout</title>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">Matt & Rado</a>
+
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu"></div>
+    </div>
+</nav>
+<!-- Navbar end -->
+
+<div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="row">
+
+        <div class="col-12">
+            <span>Payment Method</span>
+
+            <div class="card">
+                <div class="accordion" id="paypal_accordion">
+
+                    <div class="card">
+                        <div class="card-header p-0" id="paypal_header_checkout">
+                            <h2 class="mb-0">
+                                <button class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom"
+                                        type="button" data-toggle="collapse" data-target="#collapsePaypal"
+                                        aria-expanded="true" aria-controls="collapsePaypal">
+                                    <div class="d-flex align-items-center justify-content-between"><span>Paypal</span>
+                                        <img src="https://i.imgur.com/7kQEsHU.png" width="30"></div>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapsePaypal" class="collapse" aria-labelledby="paypal_header_checkout"
+                             data-parent="#paypal_accordion">
+                            <div class="card-body">
+                                <input type="text" class="form-control" placeholder="Paypal email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header p-0">
+                            <h2 class="mb-0">
+                                <button class="btn btn-light btn-block text-left p-3 rounded-0" data-toggle="collapse"
+                                        data-target="#collapseCreditCard" aria-expanded="true"
+                                        aria-controls="collapseCreditCard">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>Credit card</span>
+                                        <div class="icons"><img src="https://i.imgur.com/2ISgYja.png" width="30"> <img
+                                                src="https://i.imgur.com/W1vtnOV.png" width="30"> <img
+                                                src="https://i.imgur.com/35tC99g.png" width="30"> <img
+                                                src="https://i.imgur.com/2ISgYja.png" width="30"></div>
+                                    </div>
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseCreditCard" class="collapse show" aria-labelledby="headingOne"
+                             data-parent="#paypal_accordion">
+                            <div class="card-body payment-card-body"><span class="font-weight-normal card-text">Card Number</span>
+                                <div class="input"><i class="fa fa-credit-card"></i> <input type="text"
+                                                                                            class="form-control"
+                                                                                            placeholder="0000 0000 0000 0000">
+                                </div>
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-md-6"><span class="font-weight-normal card-text">Expiry Date</span>
+                                        <div class="input"><i class="fa fa-calendar"></i> <input type="text"
+                                                                                                 class="form-control"
+                                                                                                 placeholder="MM/YY">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6"><span class="font-weight-normal card-text">CVC/CVV</span>
+                                        <div class="input"><i class="fa fa-lock"></i> <input type="text"
+                                                                                             class="form-control"
+                                                                                             placeholder="000"></div>
+                                    </div>
+                                </div>
+                                <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl certificate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 text-center mt-5">
+            <button type="button" class="btn btn-primary fs-4">Place order</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer"></footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

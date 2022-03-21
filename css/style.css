@@ -101,17 +101,6 @@ body {
     color: black;
 }
 
-.manage-products-table {
-    margin-top: 75px;
-}
-
-.btn-add-to-cart {
-    transition-duration: 0.4s !important;
-}
-
-.btn-add-to-cart:hover {
-    background-color: blue !important;
-}
 
 .bg-c-lite-blue {
     background: -webkit-gradient(linear, left top, right top, from(#88898c), to(#dedfe3));
@@ -121,3 +110,4 @@ body {
 .border-50 {
     border-radius: 50px;
 }
+

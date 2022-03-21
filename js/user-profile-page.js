@@ -12,7 +12,6 @@ $(document).ready(function () {
 
             // function to fill fields
             updateUserProfileFields(data);
-            console.log(data);
         })
     }
 
@@ -21,7 +20,7 @@ $(document).ready(function () {
 function updateUserProfileFields(data) {
 
     $('.user_name').append(data.firstname + ' ' + data.surname);
-    $('.user_id').append('User ID: ' + data.id);
+    $('.user_id').append(data.id);
     $('#user_profile_firstname').val(data.firstname);
     $('#user_profile_surname').val(data.surname);
     $('#user_profile_username').val(data.username);
@@ -30,12 +29,53 @@ function updateUserProfileFields(data) {
 }
 
 
-// let userID = data[i].id
-// let userFirstname = data[i].firstname;
-// let userSurname = data[i].surname;
-// let username = data[i].username;
-// let userEmail = data[i].email;
-// let userAddress = data[i].address;
-// let userRoles = data[i].roles;
-// let userActive = data[i].active;
+// Saving user edits
+$('#save_user_changes').click(function (e) {
+
+    //Check if all fields contain value
+    if ($('#user_profile_firstname').val() && $('#user_profile_surname').val() &&
+        $('#user_profile_username').val() && $('#user_profile_email').val() &&
+        $('#user_profile_address').val()) {
+
+        let userFirstname = $('#user_profile_firstname').val();
+        let userSurname = $('#user_profile_surname').val();
+        let username = $('#user_profile_username').val();
+        let userEmail = $('#user_profile_email').val();
+        let userAddress = $('#user_profile_address').val();
+        let userId = $('#user_id').val();
+
+
+        var newUserObject = new Object();
+
+        newUserObject.firstname = userFirstname;
+        newUserObject.surname = userSurname;
+        newUserObject.username = username;
+        newUserObject.email = userEmail;
+        //newUserObject.password = userPassword;
+        newUserObject.address = userAddress;
+
+        let newUserData = JSON.stringify(newUserObject);
+
+        console.log(newUserData);
+
+
+        // $.ajax({
+        //     method: 'PUT',
+        //     url: 'http://localhost:8080/users/' + userId,
+        //     data: newUserData,
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     xhrFields: {
+        //         withCredentials: true
+        //     },
+        //     mode: 'no-cors'
+        // }).done(function () {
+        //     location.reload();
+        // });
+
+    } else {
+        alert("Problem updating user data");
+    }
+});
 
