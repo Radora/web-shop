@@ -37,7 +37,7 @@ $(document).ready(function () {
         }
     });
 
-    // When admin clicks on delete in the products-table ->delete the product
+    // When admin click on delete in the products-table ->delete the product
     $("#edit_users_table").on('click', '.btn-delete-user', DeleteUser);
 
     function DeleteUser() {
@@ -94,9 +94,9 @@ $(document).ready(function () {
     $('#save_user_edits').click(function (e) {
 
         //Check if all fields contain value
-        if ($('#user_edit_firstname').val() && $('#user_edit_surname').val() &&
-            $('#user_edit_username').val() && $('#user_edit_email').val() &&
-            $('#user_edit_address').val() && $('#user_edit_roles').val() && $('#user_edit_id').val()) {
+        if ($('#user_edit_firstname').val() || $('#user_edit_surname').val() ||
+            $('#user_edit_username').val() || $('#user_edit_email').val() ||
+            $('#user_edit_address').val() || $('#user_edit_roles').val()  || $('#user_edit_id').val() || $('#user_edit_password').val()) {
 
             let userFirstname = $('#user_edit_firstname').val();
             let userSurname = $('#user_edit_surname').val();
@@ -120,14 +120,15 @@ $(document).ready(function () {
             newUserObject.surname = userSurname;
             newUserObject.username = username;
             newUserObject.email = userEmail;
-            //newUserObject.password = userPassword;
+            newUserObject.password = userPassword;
             newUserObject.address = userAddress;
             newUserObject.active = userActive;
             newUserObject.roles = userRoles;
 
             let newUserData = JSON.stringify(newUserObject);
 
-
+            console.log(newUserData)
+            console.log(userId)
 
             $.ajax({
                 method: 'PUT',
@@ -141,11 +142,10 @@ $(document).ready(function () {
                 },
                 mode: 'no-cors'
             }).done(function () {
-                location.reload();
+                //location.reload();
             });
         } else {
-            console.log(newUserData);
-            alert(newUserData);
+            alert('Please set correct values first!');
         }
     });
 })
