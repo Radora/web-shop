@@ -65,11 +65,11 @@ $(document).ready(function () {
             mode: 'no-cors'
         }).done(function (data) {
 
-            $('#product_edit_name').val(data.name);
-            $('#product_edit_price').val(data.price);
-            $('#product_edit_category').val(data.category);
-            $('#product_edit_product_stock').val(data.product_stock);
-            $('#product_edit_description').val(data.description);
+            $('#new_product_title').val(data.name);
+            $('#new_product_price').val(data.price);
+            $('#new_product_cat').val(data.category);
+            $('#new_product_stock').val(data.product_stock);
+            $('#new_product_desc').val(data.description);
             $('#product_edit_id').val(data.id);
 
         });
@@ -82,16 +82,16 @@ $(document).ready(function () {
 
 
         //Check if all fields contain value
-        if ($('#product_edit_name').val() || $('#product_edit_price').val() ||
-            $('#product_edit_category').val() || $('#product_edit_product_stock').val() ||
-            $('#product_edit_description').val()) {
+        if ($('#new_product_title').val() || $('#new_product_price').val() ||
+            $('#new_product_cat').val() || $('#new_product_stock').val() ||
+            $('#new_product_desc').val()) {
 
-            let productTitle = $('#product_edit_name').val();
-            let productPrice = $('#product_edit_price').val();
-            let productCategory = $('#product_edit_category').val();
-            let productStock = $('#product_edit_product_stock').val();
+            let productTitle = $('#new_product_title').val();
+            let productPrice = $('#new_product_price').val();
+            let productCategory = $('#new_product_cat').val();
+            let productStock = $('#new_product_stock').val();
             let productId = $('#product_edit_id').val();
-            let productDescription = $('#product_edit_description').val();
+            let productDescription = $('#new_product_desc').val();
             var newProductObject = new Object();
 
             newProductObject.name = productTitle;
