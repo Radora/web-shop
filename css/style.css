@@ -114,3 +114,12 @@ body {
 .itemsCount{
     bottom: 10px;
 }
+
+.minus_one_item{
+    height: 25px;
+    width: 25px;
+}
+.plus_one_item{
+    height: 25px;
+    width: 25px;
+}

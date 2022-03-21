@@ -73,6 +73,7 @@ class cartService {
 
         let itemToAdd = localStorage.getItem(itemTitle);
 
+
         if (itemToAdd != null) {
 
             itemToAdd = JSON.parse(itemToAdd);

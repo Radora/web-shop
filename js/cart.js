@@ -48,6 +48,39 @@ function displayCartItemsFromLocalStorage() {
 function removeItemFromCart() {
 
     // get the current row
+    let currentRow = $(this).closest("tr").find();
+    let itemTitle = currentRow.find(".item_title").html();
+
+    let cartTotal = parseInt(localStorage.getItem('totalCost'));
+    let cartItemsCount = parseInt(localStorage.getItem('cartItemsCount'));
+
+    let itemToRemove = JSON.parse(localStorage.getItem(itemTitle));
+    let itemToRemovePrice = itemToRemove.price;
+    let itemToRemoveCount = itemToRemove.count;
+
+    if (cartItemsCount > itemToRemoveCount) {
+        // Update cart total
+        localStorage.setItem('totalCost', cartTotal - itemToRemovePrice);
+        // Subtract 1 from cart items
+        let cartItemsCount = localStorage.getItem('cartItemsCount');
+        localStorage.setItem('cartItemsCount', cartItemsCount - 1);
+
+        // Remove Item from basket
+        localStorage.removeItem(itemTitle);
+
+    } else {  // Last item in basket, clear storage
+        localStorage.removeItem(itemTitle);
+        localStorage.removeItem("totalCost");
+        localStorage.removeItem("cartItemsCount");
+    }
+
+    location.reload();
+}
+
+
+function removeSingleItemFromCart() {
+
+    // get the current row
     let currentRow = $(this).closest("tr");
     let itemTitle = currentRow.find(".item_title").html();
 
@@ -58,25 +91,37 @@ function removeItemFromCart() {
     let itemToRemovePrice = itemToRemove.price;
     let itemToRemoveCount = itemToRemove.count;
 
+
     if (itemToRemoveCount > 1) {
-        console.log("more than one item")
+
+        localStorage.setItem('totalCost', cartTotal - itemToRemovePrice)
+
+        // Subtract 1 from cart items
+        let cartItemsCount = localStorage.getItem('cartItemsCount');
+        cartItemsCount = parseInt(cartItemsCount);
+        localStorage.setItem('cartItemsCount', cartItemsCount - 1);
+
+        itemToReplaceWith = {'price': itemToRemovePrice, 'count': itemToRemoveCount - 1}
+        localStorage.setItem(itemTitle, JSON.stringify(itemToReplaceWith));
 
 
     } else { // Only one item to be removed
 
         // Update total price
-
         localStorage.setItem('totalCost', cartTotal - itemToRemovePrice)
 
-        // Update cart items - 1
+        // Subtract 1 from cart items
         let cartItemsCount = localStorage.getItem('cartItemsCount');
         cartItemsCount = parseInt(cartItemsCount);
         localStorage.setItem('cartItemsCount', cartItemsCount - 1);
 
+
+        // If last item remove variables from localstorage?
         // if (cartItemsNumber === 1){
         //     // removing last item from the cart
         //     localStorage.setItem('cartItemsCount', cartItemsCount - 1);
         // }
+
 
         localStorage.removeItem(itemTitle);
 
