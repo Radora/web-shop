@@ -94,9 +94,9 @@ $(document).ready(function () {
     $('#save_user_edits').click(function (e) {
 
         //Check if all fields contain value
-        if ($('#user_edit_firstname').val() && $('#user_edit_surname').val() &&
-            $('#user_edit_username').val() && $('#user_edit_email').val() &&
-            $('#user_edit_address').val() && $('#user_edit_roles').val() && $('#user_edit_password').val() && $('#user_edit_id').val()) {
+        if ($('#user_edit_firstname').val() || $('#user_edit_surname').val() ||
+            $('#user_edit_username').val() || $('#user_edit_email').val() ||
+            $('#user_edit_address').val() || $('#user_edit_roles').val()  || $('#user_edit_id').val() || $('#user_edit_password').val()) {
 
             let userFirstname = $('#user_edit_firstname').val();
             let userSurname = $('#user_edit_surname').val();
@@ -128,6 +128,7 @@ $(document).ready(function () {
             let newUserData = JSON.stringify(newUserObject);
 
             console.log(newUserData)
+            console.log(userId)
 
             $.ajax({
                 method: 'PUT',
@@ -141,7 +142,7 @@ $(document).ready(function () {
                 },
                 mode: 'no-cors'
             }).done(function () {
-                location.reload();
+                //location.reload();
             });
         } else {
             alert('Please set correct values first!');

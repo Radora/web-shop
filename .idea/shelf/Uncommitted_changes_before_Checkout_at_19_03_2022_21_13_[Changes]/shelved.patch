@@ -1,0 +1,19 @@
+Index: js/login.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>$(document).ready(function () {\r\n//von privatehtml\r\n    $('#login').click(function (e) {\r\n        e.preventDefault();\r\n        const username = $('#username').val();\r\n        const password = $('#password').val();\r\n\r\n\r\n       $.ajax({\r\n            method: 'POST',\r\n            xhrFields: {\r\n                withCredentials: true\r\n            },\r\n            url: 'http://localhost:8080/login',\r\n            data: JSON.stringify({\r\n                username: username,\r\n                password: password,\r\n            }),\r\n            headers: {\r\n                Authorization: 'application/json',\r\n            },\r\n            success: function (data) {\r\n                // sessionStorage.setItem('token', data.token);\r\n                //sessionStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');\r\n                // $(location).prop('href');\r\n\r\n                sessionStorage.setItem('username', username);\r\n\r\n                updateNavbarDependingOnUserRole();\r\n\r\n                //function to show nav items depending on user\r\n\r\n                //window.location.href = \"../pages/index.html\";\r\n            },\r\n        });\r\n    });\r\n});
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/js/login.js b/js/login.js
+--- a/js/login.js	
++++ b/js/login.js	
+@@ -30,7 +30,7 @@
+ 
+                 //function to show nav items depending on user
+ 
+-                //window.location.href = "../pages/index.html";
++                window.location.href = "../pages/index.html";
+             },
+         });
+     });

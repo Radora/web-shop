@@ -50,14 +50,77 @@ $(document).ready(function () {
         });
     }
 
+    $("#edit_products_table").on('click', '.btn-edit-product', EditProduct);
+
     function EditProduct() {
-
         // Getting value from the first cell -> the product ID
-        var currentRow = $(this).closest("tr");
-        var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+         var currentRow = $(this).closest("tr");
+         var id = currentRow.find("td:eq(0)").text(); // get current row 1st TD value
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:8080/products/' + id,
+            xhrFields:{
+                withCredentials:true
+            },
+            mode: 'no-cors'
+        }).done(function (data) {
 
+            $('#product_edit_name').val(data.name);
+            $('#product_edit_price').val(data.price);
+            $('#product_edit_category').val(data.category);
+            $('#product_edit_product_stock').val(data.product_stock);
+            $('#product_edit_description').val(data.description);
+            $('#product_edit_id').val(data.id);
+
+        });
         var asJson = JSON.stringify(id);
 
         console.log(asJson);
     }
+    // Saving product edits
+    $('#save_products_edits').click(function (e) {
+
+
+        //Check if all fields contain value
+        if ($('#product_edit_name').val() || $('#product_edit_price').val() ||
+            $('#product_edit_category').val() || $('#product_edit_product_stock').val() ||
+            $('#product_edit_description').val()) {
+
+            let productTitle = $('#product_edit_name').val();
+            let productPrice = $('#product_edit_price').val();
+            let productCategory = $('#product_edit_category').val();
+            let productStock = $('#product_edit_product_stock').val();
+            let productId = $('#product_edit_id').val();
+            let productDescription = $('#product_edit_description').val();
+            var newProductObject = new Object();
+
+            newProductObject.name = productTitle;
+            newProductObject.description = productDescription;
+            newProductObject.price = parseInt(productPrice);
+            newProductObject.product_stock = parseInt(productStock);
+            newProductObject.category = productCategory;
+
+            let newProductData = JSON.stringify(newProductObject);
+
+            console.log(newProductData)
+            console.log(productId)
+
+            $.ajax({
+                method: 'PUT',
+                url: 'http://localhost:8080/products/' + productId,
+                data: newProductData,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                xhrFields:{
+                    withCredentials:true
+                },
+                mode: 'no-cors'
+            }).done(function () {
+                location.reload();
+            });
+        } else {
+            alert('Please set correct values first!');
+        }
+    });
 })
