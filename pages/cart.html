@@ -38,64 +38,18 @@
 
                 <h1 class="mb-3">My Cart</h1>
 
-                <table id="smartphones_table" class="table table-responsive text-start text-white bg-secondary">
+                <table id="cart_table" class="table table-responsive text-start text-white bg-secondary">
                     <thead>
                     <tr>
-                        <th scope="col"><span>&#35;</span></th>
-                        <th scope="col">Title/Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col" class="text-center">Picture</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th colspan="2" scope="col" class="text-center">Actions</th>
+                        <th class="text-center" scope="col"><span>&#35;</span></th>
+                        <th class="text-center" scope="col">Title/Name</th>
+                        <th class="text-center" scope="col" class="text-center">Picture</th>
+                        <th class="text-center" scope="col">Price</th>
+                        <th class="text-center" scope="col">Quantity</th>
+                        <th class="text-center" colspan="2" scope="col" class="text-center">Actions</th>
                     </tr>
                     </thead>
-                    <tbody class="smartphones_table_body">
-                    <!--ToDo: Replace with actual data from DB-->
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Iphone X 64GB</td>
-                        <td>The iPhone X was Apple's flagship with a 5.8-inch OLED
-                            display,
-                            facial recognition and 3D camera functionality.
-                        </td>
-                        <td>
-                            <a href="https://mymobilesnews.com/wp-content/uploads/2022/03/iPhone-X.jpg"
-                               data-fancybox="gallery"
-                               data-caption="Iphone X Black">
-                                <img src="https://mymobilesnews.com/wp-content/uploads/2022/03/iPhone-X.jpg"
-                                     alt="Iphone X Black"
-                                     style="max-width: 150px; max-height: 100px">
-                            </a>
-                        </td>
-                        <td class="text-center">249€</td>
-                        <td class="text-center">1</td>
-                        <td>
-                            <button type="button" class="btn bg-danger text-white">Remove</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Apple MacBook Pro 13" MYD92D/A</td>
-                        <td>Der Apple M1 Chip definiert das 13" MacBook Pro neu. Mit einer 8-Core CPU, die komplexe
-                            Workflows beim Arbeiten mit Fotos.
-                        </td>
-                        <td>
-                            <a href="https://media.nbb-cdn.de/images/products/680000/687210/Mac_Pro_13_Spacegrau_2.png?size=2800"
-                               data-fancybox="gallery"
-                               data-caption="MacBook Pro 13">
-                                <img src="https://media.nbb-cdn.de/images/products/680000/687210/Mac_Pro_13_Spacegrau_2.png?size=2800"
-                                     alt="MacBook Pro 13"
-                                     style="max-width: 150px; max-height: 100px">
-                            </a>
-                        </td>
-                        <td class="text-center">1449€</td>
-                        <td class="text-center">1</td>
-                        <td>
-                            <button type="button" class="btn bg-danger text-white">Remove</button>
-                        </td>
-                    </tr>
-                    </tbody>
+                    <tbody class="cart_table_body"></tbody>
                 </table>
             </div>
 
@@ -116,7 +70,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/main.js"></script>
-<script src="../js/cart.js.js"></script>
+<script src="../js/cart.js"></script>
 
 </body>
 </html>
