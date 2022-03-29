@@ -26,7 +26,7 @@ function displayCartItemsFromLocalStorage() {
             let itemCount = item.count;
 
             let htmlToAppend = '<tr class="text-center align-middle"><th scope="row">' + counter + '</th>';
-            htmlToAppend += '<td class="item_title align-middle"><a href="#" class="text-decoration-none text-white item_title_link">' + itemTitle + '</a></td>';
+            htmlToAppend += '<td class="item_title align-middle"><a href="../../pages/product_single.html" class="text-decoration-none text-white item_title_link">' + itemTitle + '</a></td>';
             htmlToAppend += '<td class="item_cart_img"><a href="../img/placeholder.jpg" data-fancybox="gallery" data-caption="' + itemTitle + '"><img src="../img/placeholder.jpg" alt="Iphone X Black" style="max-width: 150px; max-height: 100px"></a></td>';
             htmlToAppend += '<td class="item_price text-center align-middle">' + itemPrice + '</td>'
             htmlToAppend += '<td class="item_count text-center align-middle">' + itemCount + '</td>'
@@ -115,7 +115,7 @@ function removeSingleItemFromCart() {
         let cartItemsCount = localStorage.getItem('cartItemsCount');
         cartItemsCount = parseInt(cartItemsCount);
         localStorage.setItem('cartItemsCount', cartItemsCount - 1);
-        
+
         // If last item remove variables from localstorage?
         // if (cartItemsNumber === 1){
         //     // removing last item from the cart

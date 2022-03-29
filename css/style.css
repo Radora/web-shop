@@ -141,3 +141,7 @@ body {
     transform: rotate(45deg);
     cursor: pointer;
 }
+
+#single_item_desc{
+    min-height: 100px;
+}
