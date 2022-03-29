@@ -115,14 +115,12 @@ function removeSingleItemFromCart() {
         let cartItemsCount = localStorage.getItem('cartItemsCount');
         cartItemsCount = parseInt(cartItemsCount);
         localStorage.setItem('cartItemsCount', cartItemsCount - 1);
-
-
+        
         // If last item remove variables from localstorage?
         // if (cartItemsNumber === 1){
         //     // removing last item from the cart
         //     localStorage.setItem('cartItemsCount', cartItemsCount - 1);
         // }
-
 
         localStorage.removeItem(itemTitle);
 

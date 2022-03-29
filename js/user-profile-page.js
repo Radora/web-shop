@@ -30,7 +30,7 @@ function updateUserProfileFields(data) {
 
 
 // Saving user edits
-$('#save_user_changes').click(function (e) {
+$('#save_user_changes').click(function () {
 
     //Check if all fields contain value
     if ($('#user_profile_firstname').val() && $('#user_profile_surname').val() &&
@@ -77,5 +77,16 @@ $('#save_user_changes').click(function (e) {
     } else {
         alert("Problem updating user data");
     }
+});
+
+
+// Opens change password modal
+$('#change_pass').click(function () {
+    $(".bg-modal").addClass('d-flex');
+});
+
+// Closes change password modal
+$('.close_modal').click(function () {
+    $(".bg-modal").removeClass('d-flex');
 });
 

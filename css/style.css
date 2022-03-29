@@ -121,5 +121,23 @@ body {
 }
 
 .item_title_link:hover {
-    color: blue!important;
+    color: blue !important;
+}
+
+.bg-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.modal-content {
+    width: 350px;
+    height: 300px;
+}
+
+.close_modal {
+    top: -20px;
+    font-size: 45px;
+    right: 4px;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
