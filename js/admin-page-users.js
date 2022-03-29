@@ -142,7 +142,7 @@ $(document).ready(function () {
                 },
                 mode: 'no-cors'
             }).done(function () {
-                //location.reload();
+                location.reload();
             });
         } else {
             alert('Please set correct values first!');
