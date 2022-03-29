@@ -90,3 +90,19 @@ $('.close_modal').click(function () {
     $(".bg-modal").removeClass('d-flex');
 });
 
+// Closes change password modal
+$('#save_new_password').click(function () {
+
+    let userFirstname = $('#user_new_password').val();
+
+    if (userFirstname.length > 3){
+        alert("New password is set!")
+        $(".bg-modal").removeClass('d-flex');
+    }else{
+        alert("Please enter valid password!")
+    }
+
+
+});
+
+
