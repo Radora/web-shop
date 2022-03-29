@@ -6,7 +6,7 @@ $(document).ready(function () {
         // get the current row data
         let currentRow = $(this).closest("tr");
         let itemPrice = currentRow.find(".item_price").html();
-        let itemTitle = currentRow.find(".item_title").html();
+        let itemTitle = currentRow.find(".item_title a").html();
 
 
         itemPrice = itemPrice.replace('€', '');

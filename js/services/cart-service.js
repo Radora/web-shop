@@ -24,7 +24,7 @@ class cartService {
                 let htmlToAppend = '<tr class="text-center align-middle"><th scope="row">' + counter + '</th>';
                 htmlToAppend += '<td class="item_title align-middle">' + itemTitle + '</td>';
                 htmlToAppend += '<td class="item_cart_img"><a href="https://mymobilesnews.com/wp-content/uploads/2022/03/iPhone-X.jpg" data-fancybox="gallery" data-caption="' + itemTitle + '"><img src="https://mymobilesnews.com/wp-content/uploads/2022/03/iPhone-X.jpg" alt="Iphone X Black" style="max-width: 150px; max-height: 100px"></a></td>';
-                htmlToAppend += '<td class="item_price text-center align-middle">' + itemPrice + '</td>'
+                htmlToAppend += '<td class="item_price text-center align-middle">' + itemPrice + '€</td>'
                 htmlToAppend += '<td class="item_count text-center align-middle">' + itemCount + '</td>'
                 htmlToAppend += '<td class="text-center align-middle"><button type="button" class="btn bg-danger text-white remove_item_from_cart">Remove</button></td></tr>'
 

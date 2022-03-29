@@ -20,7 +20,7 @@ $(document).ready(function () {
 
             console.log(productCategoryName);
 
-            if (productCategoryName === 'Laptops') {
+            if (productCategoryName === 'Desktops') {
 
                 let htmlToAppend = '<tr><td class="product-id align-middle">' + productId + '</td>';
                 htmlToAppend += '<td class="item_title align-middle"><a class="text-decoration-none text-white item_title_link" href="#">' + productTitle + '</a></td>';
