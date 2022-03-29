@@ -3,8 +3,12 @@ $(document).ready(function () {
     $("#navmenu").load("nav.html");
     $("#footer").load("footer.html");
 
+    let current_year = new Date().getFullYear();
+    let copyright = '&copy;';
+
     setTimeout(() => {
         updateCartItemsCount()
+        $('#footer_copyright').html(copyright + ' ' + current_year);
     }, 75);
 
 });
