@@ -19,7 +19,7 @@ $(document).ready(function () {
             let productStock = data[i].product_stock;
 
 
-            if (productCategoryName === 'Desktops') {
+            if (productCategoryName === 'Smartphones') {
 
                 let htmlToAppend = '<tr><td class="product-id align-middle">' + productId + '</td>';
                 htmlToAppend += '<td class="item_title align-middle"><a class="text-decoration-none text-white item_title_link" href="#">' + productTitle + '</a></td>';
