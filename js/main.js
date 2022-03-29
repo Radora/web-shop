@@ -6,7 +6,6 @@ $(document).ready(function () {
     let current_year = new Date().getFullYear();
     let copyright = '&copy;';
 
-
     setTimeout(() => {
         updateCartItemsCount()
         $('#footer_copyright').html(copyright + ' ' + current_year);

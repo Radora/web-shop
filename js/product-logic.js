@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         console.log(productJSON);
 
-        var jsonTest = ' {"category" : { "id" : 1, "name" : "Smartphones"}, "name" : "Iphone 16", "description" : "Description", "price" : 500 , "product_stock" : 10}';
+        //var jsonTest = ' {"category" : { "id" : 1, "name" : "Smartphones"}, "name" : "Iphone 16", "description" : "Description", "price" : 500 , "product_stock" : 10}';
 
         var request = $.ajax({
             method: 'POST',
